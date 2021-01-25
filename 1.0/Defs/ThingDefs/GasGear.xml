@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef Name="GasProtectiveApparel" ParentName="ApparelMakeableBase" Abstract="True">
+    <modExtensions>
+      <li Class="CloudCore.GasProtectionExtension">
+        <efficiency>1</efficiency>
+      </li>
+    </modExtensions>
+  </ThingDef>
+</Defs>

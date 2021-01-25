@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <RecipeDef>
+    <defName>ionicMake</defName>
+    <label>create ionic mass</label>
+    <description>Create a ionic particle mass from chemicals.</description>
+    <jobString>Producing particle mass.</jobString>
+    <workAmount>2000</workAmount>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <workSpeedStat>SmeltingSpeed</workSpeedStat>
+    <workSkillLearnFactor>0.3</workSkillLearnFactor>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Chemicals</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Chemicals</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ionic>1</Ionic>
+    </products>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>ionicMakeHW</defName>
+    <label>fabricate hyperweave</label>
+    <description>Create hyperweave from particle mass.</description>
+    <jobString>Producing hyperweave.</jobString>
+    <workAmount>4500</workAmount>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <workSpeedStat>SmeltingSpeed</workSpeedStat>
+    <workSkillLearnFactor>0.4</workSkillLearnFactor>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Ionic</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Ionic</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Hyperweave>10</Hyperweave>
+    </products>
+    <researchPrerequisite>ChemistryRecombination</researchPrerequisite>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>ionicMakeST</defName>
+    <label>fabricate synthread</label>
+    <description>Create synthread from particle mass.</description>
+    <jobString>Producing synthread.</jobString>
+    <workAmount>3000</workAmount>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <workSpeedStat>SmeltingSpeed</workSpeedStat>
+    <workSkillLearnFactor>0.4</workSkillLearnFactor>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Ionic</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Ionic</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Synthread>20</Synthread>
+    </products>
+    <researchPrerequisite>ChemistryRecombination</researchPrerequisite>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>ionicMakeMW</defName>
+    <label>fabricate molecularweave</label>
+    <description>Create molecularweave from particle mass.</description>
+    <jobString>Producing molecularweave.</jobString>
+    <workAmount>5000</workAmount>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <workSpeedStat>SmeltingSpeed</workSpeedStat>
+    <workSkillLearnFactor>0.4</workSkillLearnFactor>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Ionic</li>
+          </thingDefs>
+        </filter>
+        <count>40</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Ionic</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Molecularweave>20</Molecularweave>
+    </products>
+    <researchPrerequisite>ChemistryRecombination</researchPrerequisite>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>ionicMakeNC</defName>
+    <label>fabricate nanocomposite</label>
+    <description>Create nanocomposite by refining molecularweave.</description>
+    <jobString>Producing nanocomposite.</jobString>
+    <workAmount>5000</workAmount>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <workSpeedStat>SmeltingSpeed</workSpeedStat>
+    <workSkillLearnFactor>0.4</workSkillLearnFactor>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Ionic</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Molecularweave</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Ionic</li>
+        <li>Molecularweave</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Nanocomposite>20</Nanocomposite>
+    </products>
+    <researchPrerequisite>ChemistryFabrics</researchPrerequisite>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>ionicMakeSW</defName>
+    <label>fabricate smartweave</label>
+    <description>Create smartweave from cloth.</description>
+    <jobString>Producing smartweave.</jobString>
+    <workAmount>3000</workAmount>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <workSpeedStat>SmeltingSpeed</workSpeedStat>
+    <workSkillLearnFactor>0.4</workSkillLearnFactor>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Ionic</li>
+          </thingDefs>
+        </filter>
+        <count>3</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Cloth</li>
+          </thingDefs>
+        </filter>
+        <count>50</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Ionic</li>
+        <li>Cloth</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Smartweave>50</Smartweave>
+    </products>
+    <researchPrerequisite>ChemistryFabrics</researchPrerequisite>
+  </RecipeDef>
+</Defs>

@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+  <!-- ==================== chemical launcher ========================== -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_ChemLauncher</defName>
+    <label>chemical blob</label>
+    <graphicData>
+      <texPath>Weapons/Chem/ChemProjectile</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <speed>35</speed>
+      <damageDef>ChemBlast</damageDef>
+      <damageAmountBase>5</damageAmountBase>
+      <explosionRadius>1.5</explosionRadius>
+      <preExplosionSpawnChance>0.8</preExplosionSpawnChance>
+      <ai_IsIncendiary>true</ai_IsIncendiary>
+    </projectile>
+  </ThingDef>
+  <DamageDef ParentName="Flame">
+    <defName>ChemBlast</defName>
+    <label>chemical burn</label>
+    <hasForcefulImpact>false</hasForcefulImpact>
+    <makesBlood>false</makesBlood>
+    <canInterruptJobs>false</canInterruptJobs>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has succumbed to chemical exposure.</deathMessage>
+    <hediff>chemicalBurn</hediff>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <explosionHeatEnergyPerCell>10</explosionHeatEnergyPerCell>
+    <armorCategory>Heat</armorCategory>
+    <explosionCellMote>Mote_BlastExtinguisher</explosionCellMote>
+    <explosionColorEdge>(0.5, 1, 0.6, 0.1)</explosionColorEdge>
+    <soundExplosion>Explosion_Flame</soundExplosion>
+  </DamageDef>
+  <HediffDef ParentName="InjuryBase">
+    <defName>chemicalBurn</defName>
+    <label>chemical exposure</label>
+    <description>chemical exposure</description>
+    <displayWound>false</displayWound>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <labelTendedWell>bandaged</labelTendedWell>
+        <labelTendedWellInner>sutured</labelTendedWellInner>
+        <labelSolidTendedWell>set</labelSolidTendedWell>
+      </li>
+      <li Class="HediffCompProperties_Infecter">
+        <infectionChance>0.5</infectionChance>
+      </li>
+      <li Class="HediffCompProperties_GetsPermanent">
+        <permanentLabel>old exposure</permanentLabel>
+      </li>
+    </comps>
+    <injuryProps>
+      <painPerSeverity>0.0125</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+      <canMerge>true</canMerge>
+      <destroyedLabel>Lost to chemical exposure</destroyedLabel>
+    </injuryProps>
+  </HediffDef>
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_chemLauncher</defName>
+    <label>chemical launcher</label>
+    <description>chemical mass launcher. Causes severe chemical burns</description>
+    <graphicData>
+      <texPath>Weapons/Chem/chemLauncher</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <statBases>
+      <WorkToMake>100000</WorkToMake>
+      <MarketValue>1000</MarketValue>
+      <Mass>3</Mass>
+      <AccuracyTouch>0.8</AccuracyTouch>
+      <AccuracyShort>0.60</AccuracyShort>
+      <AccuracyMedium>0.40</AccuracyMedium>
+      <AccuracyLong>0.20</AccuracyLong>
+      <RangedWeapon_Cooldown>2.5</RangedWeapon_Cooldown>
+    </statBases>
+    <recipeMaker>
+      <recipeUsers>
+        <li>TableChemical</li>
+      </recipeUsers>
+      <researchPrerequisite>ChemistryVolatile</researchPrerequisite>
+    </recipeMaker>
+    <costList>
+      <Uranium>2</Uranium>
+      <Plasteel>5</Plasteel>
+      <Chemicals>100</Chemicals>
+      <Steel>50</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <techLevel>Industrial</techLevel>
+    <weaponTags>
+      <li>Gun</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_ChemLauncher</defaultProjectile>
+        <warmupTime>3.5</warmupTime>
+        <burstShotCount>10</burstShotCount>
+        <ticksBetweenBurstShots>20</ticksBetweenBurstShots>
+        <range>22</range>
+        <soundCast>Shot_IncendiaryLauncher</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>12</muzzleFlashScale>
+        <forcedMissRadius>1</forcedMissRadius>
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Nano_Emitter</defName>
+    <label>nanobullet</label>
+    <graphicData>
+      <texPath>Weapons/Chem/CarbonFiberProjectile</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <projectile>
+      <speed>70</speed>
+      <damageDef>RangedStab</damageDef>
+      <damageAmountBase>20</damageAmountBase>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_nanoLauncher</defName>
+    <label>carbon-mass emitter</label>
+    <description>Small portable mass-driver which propels small amounts of carbon fiber material at high speeds, ensuring low falloff and high accuracy at longer ranges.</description>
+    <graphicData>
+      <texPath>Weapons/Chem/carbonFiberEmmiter</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <statBases>
+      <WorkToMake>100000</WorkToMake>
+      <MarketValue>5000</MarketValue>
+      <Mass>3</Mass>
+      <AccuracyTouch>0.5</AccuracyTouch>
+      <AccuracyShort>0.70</AccuracyShort>
+      <AccuracyMedium>0.90</AccuracyMedium>
+      <AccuracyLong>0.90</AccuracyLong>
+      <RangedWeapon_Cooldown>1.7</RangedWeapon_Cooldown>
+    </statBases>
+    <recipeMaker>
+      <recipeUsers>
+        <li>TableMolecular</li>
+      </recipeUsers>
+      <researchPrerequisite>ChemistryFabrics</researchPrerequisite>
+    </recipeMaker>
+    <costList>
+      <Uranium>5</Uranium>
+      <Plasteel>15</Plasteel>
+      <Chemicals>20</Chemicals>
+      <Ionic>30</Ionic>
+      <Steel>50</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <techLevel>Spacer</techLevel>
+    <weaponTags>
+      <li>Gun</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_Nano_Emitter</defaultProjectile>
+        <warmupTime>0.5</warmupTime>
+        <burstShotCount>4</burstShotCount>
+        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+        <range>60</range>
+        <soundCast>Interact_BeatFire</soundCast>
+        <muzzleFlashScale>4</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+</Defs>

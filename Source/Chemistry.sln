@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chemistry", "Chemistry\Chemistry.csproj", "{FDABF844-8869-4573-9E87-BED759C365FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudCore", "CloudCore\CloudCore.csproj", "{D03FE142-DBBC-4D16-9FAA-777F81E5A4B5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FDABF844-8869-4573-9E87-BED759C365FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDABF844-8869-4573-9E87-BED759C365FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDABF844-8869-4573-9E87-BED759C365FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDABF844-8869-4573-9E87-BED759C365FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D03FE142-DBBC-4D16-9FAA-777F81E5A4B5}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{D03FE142-DBBC-4D16-9FAA-777F81E5A4B5}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{D03FE142-DBBC-4D16-9FAA-777F81E5A4B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D03FE142-DBBC-4D16-9FAA-777F81E5A4B5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C6463B82-6E6C-4625-8EC8-43C4CE843356}
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		outputpath = ..\..\Assemblies
+	EndGlobalSection
+EndGlobal

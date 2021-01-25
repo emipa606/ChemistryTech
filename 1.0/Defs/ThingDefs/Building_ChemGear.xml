@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="GasProtectiveApparel">
+    <defName>BasicGasMask</defName>
+    <label>gas mask</label>
+    <description>Basic gas mask with recognizable air filter cylinder.</description>
+    <techLevel>Industrial</techLevel>
+    <graphicData>
+      <texPath>Gear/Chem/gasmask/GasMask</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    <thingCategories>
+      <li>Headgear</li>
+    </thingCategories>
+    <stuffCategories>
+      <li>Fabric</li>
+    </stuffCategories>
+    <costStuffCount>50</costStuffCount>
+    <statBases>
+      <WorkToMake>3000</WorkToMake>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>1.2</Mass>
+      <StuffEffectMultiplierArmor>0.1</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.1</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.1</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>1.0</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <PainShockThreshold>0.10</PainShockThreshold>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Gear/Chem/gasmask/GasMask</wornGraphicPath>
+      <hatRenderedFrontOfFace>true</hatRenderedFrontOfFace>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+    <recipeMaker>
+      <workSpeedStat>SmithingSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedSculpture</unfinishedThingDef>
+    </recipeMaker>
+  </ThingDef>
+</Defs>

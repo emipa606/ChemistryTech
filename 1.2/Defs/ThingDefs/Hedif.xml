@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <DamageDef>
+    <defName>GasExposure</defName>
+    <label>gas poisoning</label>
+    <description>gas poisoning</description>
+    <externalViolence>false</externalViolence>
+    <deathMessage>{0} has succumbed to gas exposure.</deathMessage>
+    <hediff>HeliumExposure</hediff>
+  </DamageDef>
+  <HediffDef>
+    <defName>HeliumExposure</defName>
+    <label>funny voice</label>
+    <description>funny voice</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.9, 0.9, 1)</defaultLabelColor>
+    <initialSeverity>0.001</initialSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>
+          <min>1000</min>
+          <max>4000</max>
+        </disappearsAfterTicks>
+      </li>
+    </comps>
+  </HediffDef>
+</Defs>

@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <RecipeDef>
+    <defName>chemicalMakeAnesthezineGas</defName>
+    <label>create anesthezine</label>
+    <description>Fill gas tank with anesthezine gas.</description>
+    <jobString>Filling tank.</jobString>
+    <workAmount>500</workAmount>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <workSpeedStat>SmeltingSpeed</workSpeedStat>
+    <workSkillLearnFactor>0.2</workSkillLearnFactor>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RefinedChemicals</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RefinedChemicals</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <GasAnesthezine>5</GasAnesthezine>
+    </products>
+    <researchPrerequisite>ChemistryGases</researchPrerequisite>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>chemicalMakeChlorineGas</defName>
+    <label>create chlorine gas</label>
+    <description>Fill gas tank with chlorine gas.</description>
+    <jobString>Filling tank.</jobString>
+    <workAmount>500</workAmount>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <workSpeedStat>SmeltingSpeed</workSpeedStat>
+    <workSkillLearnFactor>0.2</workSkillLearnFactor>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RefinedChemicals</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RefinedChemicals</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <GasChlorine>1</GasChlorine>
+    </products>
+    <researchPrerequisite>ChemistryGasesChlorine</researchPrerequisite>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>chemicalMakeMustardGas</defName>
+    <label>create mustard gas</label>
+    <description>Fill gas tank with mustard gas.</description>
+    <jobString>Filling tank.</jobString>
+    <workAmount>1000</workAmount>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <workSpeedStat>SmeltingSpeed</workSpeedStat>
+    <workSkillLearnFactor>0.2</workSkillLearnFactor>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RefinedChemicals</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RefinedChemicals</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <GasMustard>1</GasMustard>
+    </products>
+    <researchPrerequisite>ChemistryGasesMustard</researchPrerequisite>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>chemicalMakeSarinGas</defName>
+    <label>create sarin gas</label>
+    <description>Fill gas tank with sarin gas.</description>
+    <jobString>Filling tank.</jobString>
+    <workAmount>2000</workAmount>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <workSpeedStat>SmeltingSpeed</workSpeedStat>
+    <workSkillLearnFactor>0.2</workSkillLearnFactor>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RefinedChemicals</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RefinedChemicals</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <GasSarin>1</GasSarin>
+    </products>
+    <researchPrerequisite>ChemistryGasesSarin</researchPrerequisite>
+  </RecipeDef>
+</Defs>

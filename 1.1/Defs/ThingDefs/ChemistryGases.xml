@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="ResourceBasedMom">
+    <defName>GasChlorine</defName>
+    <label>Chlorine Gas</label>
+    <description>Chlorine gas tank.</description>
+    <graphicData>
+      <texPath>Resources/Chem/GasChlorine</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>5</MaxHitPoints>
+      <MarketValue>100</MarketValue>
+      <Flammability>5.0</Flammability>
+      <Mass>1</Mass>
+      <Cleanliness>-5</Cleanliness>
+    </statBases>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <tradeNeverStack>true</tradeNeverStack>
+  </ThingDef>
+  <ThingDef ParentName="ResourceBasedMom">
+    <defName>GasMustard</defName>
+    <label>Mustard Gas</label>
+    <description>Mustard gas tank.</description>
+    <graphicData>
+      <texPath>Resources/Chem/GasMustard</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>5</MaxHitPoints>
+      <MarketValue>150</MarketValue>
+      <Flammability>5.0</Flammability>
+      <Mass>1</Mass>
+      <Cleanliness>-5</Cleanliness>
+    </statBases>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <tradeNeverStack>true</tradeNeverStack>
+  </ThingDef>
+  <ThingDef ParentName="ResourceBasedMom">
+    <defName>GasSarin</defName>
+    <label>Sarin Gas</label>
+    <description>Sarin gas tank.</description>
+    <graphicData>
+      <texPath>Resources/Chem/GasSarin</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>5</MaxHitPoints>
+      <MarketValue>500</MarketValue>
+      <Flammability>5.0</Flammability>
+      <Mass>1</Mass>
+      <Cleanliness>-5</Cleanliness>
+    </statBases>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <tradeNeverStack>true</tradeNeverStack>
+  </ThingDef>
+  <ThingDef ParentName="ResourceBasedMom">
+    <defName>GasAnesthezine</defName>
+    <label>Anesthezine Gas</label>
+    <description>Anesthezine gas tank.</description>
+    <graphicData>
+      <texPath>Resources/Chem/GasAnesthezine</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>5</MaxHitPoints>
+      <MarketValue>100</MarketValue>
+      <Flammability>5.0</Flammability>
+      <Mass>1</Mass>
+      <Cleanliness>-5</Cleanliness>
+    </statBases>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <tradeNeverStack>false</tradeNeverStack>
+  </ThingDef>
+</Defs>
