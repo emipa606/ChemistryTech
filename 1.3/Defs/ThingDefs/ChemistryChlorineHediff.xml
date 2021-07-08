@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="Core_Gas">
+    <defName>GasChlorine_Gas</defName>
+    <label>chlorine gas</label>
+    <graphicData>
+      <texPath>Things/Gas/Puff</texPath>
+      <drawSize>2.2</drawSize>
+      <color>(0.5,0.95,0.5,0.5)</color>
+    </graphicData>
+    <gas>
+      <expireSeconds>
+        <min>60</min>
+        <max>360</max>
+      </expireSeconds>
+      <blockTurretTracking>false</blockTurretTracking>
+      <accuracyPenalty>0.2</accuracyPenalty>
+    </gas>
+    <projectile>
+      <damageDef>ChlorineGasExposure</damageDef>
+      <damageAmountBase>0</damageAmountBase>
+    </projectile>
+  </ThingDef>
+  <DamageDef>
+    <defName>ChlorineGasExposure</defName>
+    <label>chlorine poisoning</label>
+    <externalViolence>false</externalViolence>
+    <deathMessage>{0} has succumbed to chlorine exposure.</deathMessage>
+    <hediff>ChlorineExposure</hediff>
+  </DamageDef>
+  <HediffDef ParentName="InfectionBase">
+    <defName>ChlorineExposure</defName>
+    <label>chlorine poisoning</label>
+    <description>chlorine poisoning</description>
+    <labelNoun>a poisoning</labelNoun>
+    <makesSickThought>true</makesSickThought>
+    <defaultLabelColor>(0.5, 0.95, 0.5)</defaultLabelColor>
+    <initialSeverity>0.8</initialSeverity>
+    <tendable>true</tendable>
+    <comps>
+      <li Class="HediffCompProperties_Discoverable">
+        <sendLetterWhenDiscovered>true</sendLetterWhenDiscovered>
+      </li>
+      <li Class="HediffCompProperties_TendDuration">
+        <baseTendDurationHours>12</baseTendDurationHours>
+        <severityPerDayTended>-0.4</severityPerDayTended>
+        <disappearsAtTotalTendQuality>4</disappearsAtTotalTendQuality>
+      </li>
+      <li Class="HediffCompProperties_Immunizable">
+        <severityPerDayNotImmune>0.1</severityPerDayNotImmune>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>minor</label>
+        <painOffset>0.05</painOffset>
+        <capMods>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.2</offset>
+          </li>
+          <li>
+            <capacity>Breathing</capacity>
+            <offset>-0.1</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.33</minSeverity>
+        <label>major</label>
+        <painOffset>0.08</painOffset>
+        <capMods>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.3</offset>
+          </li>
+          <li>
+            <capacity>Breathing</capacity>
+            <offset>-0.2</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.78</minSeverity>
+        <label>extreme</label>
+        <lifeThreatening>true</lifeThreatening>
+        <painOffset>0.12</painOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.2</offset>
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.5</offset>
+          </li>
+          <li>
+            <capacity>Breathing</capacity>
+            <offset>-0.4</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.87</minSeverity>
+        <label>extreme</label>
+        <lifeThreatening>true</lifeThreatening>
+        <painOffset>0.85</painOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.1</setMax>
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.95</offset>
+          </li>
+          <li>
+            <capacity>Breathing</capacity>
+            <offset>-0.7</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+</Defs>
