@@ -25,7 +25,7 @@
     <projectileWhenLoaded>Bullet_Shell_Mustard</projectileWhenLoaded>
     <costList>
       <Shell_HighExplosive>1</Shell_HighExplosive>
-      <GasChlorine>1</GasChlorine>
+      <GasMustard>1</GasMustard>
     </costList>
   </ThingDef>
   <ThingDef ParentName="ChemistryShellBase">
@@ -39,7 +39,7 @@
     <projectileWhenLoaded>Bullet_Shell_Sarin</projectileWhenLoaded>
     <costList>
       <Shell_HighExplosive>1</Shell_HighExplosive>
-      <GasChlorine>1</GasChlorine>
+      <GasSarin>1</GasSarin>
     </costList>
     <tradeNeverStack>true</tradeNeverStack>
   </ThingDef>
