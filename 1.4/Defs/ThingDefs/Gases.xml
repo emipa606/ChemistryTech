@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef Name="Core_Gas" Abstract="true">
+    <defName>Unknown_Gas</defName>
+    <label>gas</label>
+    <thingClass>CloudCore.Core_Gas</thingClass>
+    <category>Gas</category>
+    <altitudeLayer>Gas</altitudeLayer>
+    <useHitPoints>false</useHitPoints>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <graphicClass>Graphic_Gas</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <texPath>Things/Gas/Puff</texPath>
+      <drawSize>2.2</drawSize>
+      <color>(1.0,1.0,1.0,0.5)</color>
+    </graphicData>
+    <gas>
+      <expireSeconds>
+        <min>60</min>
+        <max>360</max>
+      </expireSeconds>
+      <rotationSpeed>10</rotationSpeed>
+    </gas>
+    <projectile>
+      <damageDef>GasExposure</damageDef>
+      <damageAmountBase>0</damageAmountBase>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="Core_Gas">
+    <defName>Helium_Gas</defName>
+    <label>helium</label>
+    <graphicData>
+      <texPath>Things/Gas/Puff</texPath>
+      <drawSize>2.2</drawSize>
+      <color>(0.9,0.9,1.0,0.3)</color>
+    </graphicData>
+    <gas>
+      <expireSeconds>
+        <min>10</min>
+        <max>30</max>
+      </expireSeconds>
+    </gas>
+  </ThingDef>
+</Defs>

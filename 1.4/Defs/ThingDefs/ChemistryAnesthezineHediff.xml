@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="Core_Gas">
+    <defName>GasAnesthezine_Gas</defName>
+    <label>Sleeping gas</label>
+    <graphicData>
+      <texPath>Things/Gas/Puff</texPath>
+      <drawSize>2.2</drawSize>
+      <color>(0.7,0.3,0.3,0.3)</color>
+    </graphicData>
+    <gas>
+      <expireSeconds>
+        <min>120</min>
+        <max>460</max>
+      </expireSeconds>
+    </gas>
+    <projectile>
+      <damageDef>AnesthezineGasExposure</damageDef>
+      <damageAmountBase>0</damageAmountBase>
+    </projectile>
+  </ThingDef>
+  <DamageDef>
+    <defName>AnesthezineGasExposure</defName>
+    <label>sedated</label>
+    <externalViolence>false</externalViolence>
+    <deathMessage>{0} has succumbed to anesthezine exposure.</deathMessage>
+    <hediff>AnesthezineExposure</hediff>
+  </DamageDef>
+  <HediffDef ParentName="InfectionBase">
+    <defName>AnesthezineExposure</defName>
+    <label>anesthezine</label>
+    <description>anesthezine</description>
+    <labelNoun>a sedation</labelNoun>
+    <makesSickThought>false</makesSickThought>
+    <defaultLabelColor>(1, 0.8, 0.8)</defaultLabelColor>
+    <initialSeverity>1</initialSeverity>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>
+          <min>10000</min>
+          <max>15000</max>
+        </disappearsAfterTicks>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>severe</label>
+        <painOffset>0</painOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.1</setMax>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+</Defs>

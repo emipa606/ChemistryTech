@@ -1,16 +1,16 @@
 # ChemistryTech
 
-![Image](https://i.imgur.com/WAEzk68.png)
+![Image](https://i.imgur.com/buuPQel.png)
 
 Update of BookBurners mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=1596662653
 
 - Included the Cloud Core-mod since it was only used for this mod and a joke mod
 
-![Image](https://i.imgur.com/7Gzt3Rg.png)
+![Image](https://i.imgur.com/pufA0kM.png)
 
 	
-![Image](https://i.imgur.com/NOW7jU1.png)
+![Image](https://i.imgur.com/Z4GOv8H.png)
 
 Break anything you don't need into chemical compounds. Can be used as a good form of waste disposal.
 
@@ -42,7 +42,7 @@ UPDATES
 - valves replaced by IEDs
 - bulk chemical creation for 50 chamicals at once
 
-![Image](https://i.imgur.com/Rs6T6cr.png)
+![Image](https://i.imgur.com/PwoNOj4.png)
 
 
 
@@ -52,6 +52,7 @@ UPDATES
 -  For best support, please use the Discord-channel for error-reporting.
 -  Do not report errors by making a discussion-thread, I get no notification of that.
 -  If you have the solution for a problem, please post it to the GitHub repository.
+
 
 
 

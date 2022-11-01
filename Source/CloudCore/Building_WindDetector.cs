@@ -3,46 +3,45 @@ using System.Text;
 using UnityEngine;
 using Verse;
 
-namespace CloudCore
+namespace CloudCore;
+
+public class GasTestBuilding : Building
 {
-    public class GasTestBuilding : Building
+    //private int spawnGasTick = 0;
+
+    private void Spawn_Gas()
     {
-        //private int spawnGasTick = 0;
+        var thingDef = DefDatabase<ThingDef>.GetNamed("Helium_Gas");
+        var thing = ThingMaker.MakeThing(thingDef);
+        var loc = Position;
+        var map = Map;
 
-        private void Spawn_Gas()
+        GenSpawn.Spawn(thing, loc, map);
+    }
+
+    public override string GetInspectString()
+    {
+        var stringBuilder = new StringBuilder();
+        var cws = (MapComponent_WindSpeed)Find.CurrentMap.GetComponent(typeof(MapComponent_WindSpeed));
+        if (cws != null)
         {
-            var thingDef = DefDatabase<ThingDef>.GetNamed("Helium_Gas");
-            var thing = ThingMaker.MakeThing(thingDef);
-            var loc = Position;
-            var map = Map;
-
-            GenSpawn.Spawn(thing, loc, map);
+            stringBuilder.AppendLine($"Speed: {cws.windSpeed}");
+            stringBuilder.AppendLine($"Direction: {cws.windDirection}");
+            stringBuilder.AppendLine($"Direction rad: {cws.windDirectionRad}");
         }
 
-        public override string GetInspectString()
-        {
-            var stringBuilder = new StringBuilder();
-            var cws = (MapComponent_WindSpeed) Find.CurrentMap.GetComponent(typeof(MapComponent_WindSpeed));
-            if (cws != null)
-            {
-                stringBuilder.AppendLine("Speed: " + cws.windSpeed);
-                stringBuilder.AppendLine("Direction: " + cws.windDirection);
-                stringBuilder.AppendLine("Direction rad: " + cws.windDirectionRad);
-            }
+        stringBuilder.AppendLine(base.GetInspectString());
+        return stringBuilder.ToString().TrimEndNewlines();
+    }
 
-            stringBuilder.AppendLine(base.GetInspectString());
-            return stringBuilder.ToString().TrimEndNewlines();
-        }
-
-        public override IEnumerable<Gizmo> GetGizmos()
+    public override IEnumerable<Gizmo> GetGizmos()
+    {
+        yield return new Command_Action
         {
-            yield return new Command_Action
-            {
-                action = Spawn_Gas,
-                defaultLabel = "Spawn Gas",
-                defaultDesc = "",
-                icon = ContentFinder<Texture2D>.Get("Things/Gas/Puff")
-            };
-        }
+            action = Spawn_Gas,
+            defaultLabel = "Spawn Gas",
+            defaultDesc = "",
+            icon = ContentFinder<Texture2D>.Get("Things/Gas/Puff")
+        };
     }
 }

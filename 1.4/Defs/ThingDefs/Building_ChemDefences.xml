@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="TrapIEDBase">
+    <defName>TrapIED_Chlorine</defName>
+    <label>Chlorine Gas trap</label>
+    <description>Chlorine gas trap based on the IED design.</description>
+    <graphicData>
+      <texPath>Building/Chem/BombChlorine</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <damageData>
+        <rect>(0.1,0,0.8,0.3)</rect>
+      </damageData>
+    </graphicData>
+    <costList>
+      <Shell_Chlorine>2</Shell_Chlorine>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>3.9</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+        <startWickHitPointsPercent>0.8</startWickHitPointsPercent>
+        <postExplosionSpawnChance>1</postExplosionSpawnChance>
+        <postExplosionSpawnThingDef>GasChlorine_Gas</postExplosionSpawnThingDef>
+        <wickTicks>
+          <min>15</min>
+          <max>15</max>
+        </wickTicks>
+      </li>
+    </comps>
+    <researchPrerequisites>
+      <li>IEDs</li>
+      <li>ChemistryGases</li>
+    </researchPrerequisites>
+    <specialDisplayRadius>3.9</specialDisplayRadius>
+  </ThingDef>
+  <ThingDef ParentName="TrapIEDBase">
+    <defName>TrapIED_Mustard</defName>
+    <label>Mustard Gas trap</label>
+    <description>Mustard gas trap based on the IED design.</description>
+    <graphicData>
+      <texPath>Building/Chem/BombMustard</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <damageData>
+        <rect>(0.1,0,0.8,0.3)</rect>
+      </damageData>
+    </graphicData>
+    <costList>
+      <Shell_Mustard>2</Shell_Mustard>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>3.9</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+        <startWickHitPointsPercent>0.8</startWickHitPointsPercent>
+        <postExplosionSpawnChance>1</postExplosionSpawnChance>
+        <postExplosionSpawnThingDef>GasMustard_Gas</postExplosionSpawnThingDef>
+        <wickTicks>
+          <min>15</min>
+          <max>15</max>
+        </wickTicks>
+      </li>
+    </comps>
+    <researchPrerequisites>
+      <li>IEDs</li>
+      <li>ChemistryGases</li>
+    </researchPrerequisites>
+    <specialDisplayRadius>3.9</specialDisplayRadius>
+  </ThingDef>
+  <ThingDef ParentName="TrapIEDBase">
+    <defName>TrapIED_Sarine</defName>
+    <label>Sarin Gas trap</label>
+    <description>Sarin gas trap based on the IED design.</description>
+    <graphicData>
+      <texPath>Building/Chem/BombSarin</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <damageData>
+        <rect>(0.1,0,0.8,0.3)</rect>
+      </damageData>
+    </graphicData>
+    <costList>
+      <Shell_Sarin>2</Shell_Sarin>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>3.9</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+        <startWickHitPointsPercent>0.8</startWickHitPointsPercent>
+        <postExplosionSpawnChance>1</postExplosionSpawnChance>
+        <postExplosionSpawnThingDef>GasSarin_Gas</postExplosionSpawnThingDef>
+        <wickTicks>
+          <min>15</min>
+          <max>15</max>
+        </wickTicks>
+      </li>
+    </comps>
+    <researchPrerequisites>
+      <li>IEDs</li>
+      <li>ChemistryGases</li>
+    </researchPrerequisites>
+    <specialDisplayRadius>3.9</specialDisplayRadius>
+  </ThingDef>
+  <ThingDef ParentName="TrapIEDBase">
+    <defName>TrapIED_Anesthezine</defName>
+    <label>Anesthezine Gas trap</label>
+    <description>Anesthezine gas trap based on the IED design.</description>
+    <graphicData>
+      <texPath>Building/Chem/BombAnesthezine</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <damageData>
+        <rect>(0.1,0,0.8,0.3)</rect>
+      </damageData>
+    </graphicData>
+    <costList>
+      <GasAnesthezine>2</GasAnesthezine>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>3.9</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+        <startWickHitPointsPercent>0.8</startWickHitPointsPercent>
+        <postExplosionSpawnChance>1</postExplosionSpawnChance>
+        <postExplosionSpawnThingDef>GasAnesthezine_Gas</postExplosionSpawnThingDef>
+        <wickTicks>
+          <min>15</min>
+          <max>15</max>
+        </wickTicks>
+      </li>
+    </comps>
+    <researchPrerequisites>
+      <li>IEDs</li>
+      <li>ChemistryGases</li>
+    </researchPrerequisites>
+    <specialDisplayRadius>3.9</specialDisplayRadius>
+  </ThingDef>
+</Defs>

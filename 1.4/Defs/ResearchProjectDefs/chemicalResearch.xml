@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--=============================== Tier 1: pre-electricity ===================================-->
+  <ResearchProjectDef>
+    <defName>Chemistry</defName>
+    <label>chemistry</label>
+    <description>Learn to produce basic chemical compounds.</description>
+    <baseCost>3000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>BiofuelRefining</li>
+    </prerequisites>
+    <researchViewX>5</researchViewX>
+    <researchViewY>5</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>ChemistryChems</defName>
+    <label>chemical manufacture</label>
+    <description>Production of basic chemical for drug production.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>Chemistry</li>
+    </prerequisites>
+    <researchViewX>5</researchViewX>
+    <researchViewY>6</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>ChemistryRefinement</defName>
+    <label>chemical refinement</label>
+    <description>Production of purified chemical compounds.</description>
+    <baseCost>1500</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>Chemistry</li>
+    </prerequisites>
+    <researchViewX>3</researchViewX>
+    <researchViewY>6</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>ChemistryDissolution</defName>
+    <label>chemical dissolution</label>
+    <description>Break down complex chemical molecules to ionic mass.</description>
+    <baseCost>4000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>ChemistryChems</li>
+    </prerequisites>
+    <researchViewX>4</researchViewX>
+    <researchViewY>6</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>ChemistryPower</defName>
+    <label>chemical fire</label>
+    <description>Learn how to use chemical compounds to induce high temperature burn.</description>
+    <baseCost>3500</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>ChemistryChems</li>
+    </prerequisites>
+    <researchViewX>5</researchViewX>
+    <researchViewY>6</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>ChemistryMetals</defName>
+    <label>chemical synthesis</label>
+    <description>Production of basic metallic compounds.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>Chemistry</li>
+    </prerequisites>
+    <researchViewX>6</researchViewX>
+    <researchViewY>6</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>ChemistryPlasteel</defName>
+    <label>chemical distillation</label>
+    <description>Production of noble metals and laboratory compounds.</description>
+    <baseCost>3000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>ChemistryMetals</li>
+    </prerequisites>
+    <researchViewX>5</researchViewX>
+    <researchViewY>7</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>ChemistryIsotopes</defName>
+    <label>isotope production</label>
+    <description>Production of uranium based isotopes.</description>
+    <baseCost>5000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>ChemistryPlasteel</li>
+    </prerequisites>
+    <researchViewX>6</researchViewX>
+    <researchViewY>7</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>ChemistryRecombination</defName>
+    <label>chemical recombination</label>
+    <description>Production of synthetic materials.</description>
+    <baseCost>7000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>ChemistryDissolution</li>
+      <li>ChemistryIsotopes</li>
+    </prerequisites>
+    <researchViewX>4</researchViewX>
+    <researchViewY>8</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>ChemistryVolatile</defName>
+    <label>volatile chemicals</label>
+    <description>Production of volatile and dangerous chemicals.</description>
+    <baseCost>4000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>ChemistryIsotopes</li>
+    </prerequisites>
+    <researchViewX>5</researchViewX>
+    <researchViewY>8</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>ChemistryFabrics</defName>
+    <label>fiber fabrication</label>
+    <description>Production of advanced synthetic materials.</description>
+    <baseCost>8000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>ChemistryRecombination</li>
+    </prerequisites>
+    <researchViewX>3</researchViewX>
+    <researchViewY>8</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>ChemistryGases</defName>
+    <label>gas production</label>
+    <description>Production and storage of gaseous substances.</description>
+    <baseCost>3000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>ChemistryVolatile</li>
+      <li>ChemistryPower</li>
+    </prerequisites>
+    <researchViewX>6</researchViewX>
+    <researchViewY>8</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>ChemistryGasesChlorine</defName>
+    <label>chlorine gas</label>
+    <description>Chlorine is a yellow-green gas at room temperature. It is an extremely reactive element and a strong oxidising agent.</description>
+    <baseCost>3000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>ChemistryGases</li>
+    </prerequisites>
+    <researchViewX>2</researchViewX>
+    <researchViewY>9</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>ChemistryGasesMustard</defName>
+    <label>mustard gas</label>
+    <description>Sulfur mustard, commonly known as mustard gas, is the prototypical substance of the sulfur-based family of cytotoxic and vesicant chemical warfare agents.</description>
+    <baseCost>5000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>ChemistryGasesChlorine</li>
+    </prerequisites>
+    <researchViewX>3</researchViewX>
+    <researchViewY>9</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>ChemistryGasesSarin</defName>
+    <label>sarin gas</label>
+    <description>Sarin is a highly toxic synthetic organophosphorus compound used as a chemical weapon due to its extreme potency as a nerve agent.</description>
+    <baseCost>7000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>ChemistryGasesChlorine</li>
+    </prerequisites>
+    <researchViewX>3</researchViewX>
+    <researchViewY>9</researchViewY>
+  </ResearchProjectDef>
+</Defs>

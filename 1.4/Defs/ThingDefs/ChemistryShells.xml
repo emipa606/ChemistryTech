@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="ChemistryShellBase">
+    <defName>Shell_Chlorine</defName>
+    <label>chlorine gas shell</label>
+    <description>A shell filled with chlorine gas. Can be fired from mortars.</description>
+    <graphicData>
+      <texPath>Weapons/Chem/chlorineShell</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectileWhenLoaded>Bullet_Shell_Chlorine</projectileWhenLoaded>
+    <costList>
+      <Shell_HighExplosive>1</Shell_HighExplosive>
+      <GasChlorine>1</GasChlorine>
+    </costList>
+  </ThingDef>
+  <ThingDef ParentName="ChemistryShellBase">
+    <defName>Shell_Mustard</defName>
+    <label>mustard gas shell</label>
+    <description>A shell filled with mustard gas. Can be fired from mortars.</description>
+    <graphicData>
+      <texPath>Weapons/Chem/mustardShell</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectileWhenLoaded>Bullet_Shell_Mustard</projectileWhenLoaded>
+    <costList>
+      <Shell_HighExplosive>1</Shell_HighExplosive>
+      <GasMustard>1</GasMustard>
+    </costList>
+  </ThingDef>
+  <ThingDef ParentName="ChemistryShellBase">
+    <defName>Shell_Sarin</defName>
+    <label>sarin gas shell</label>
+    <description>A shell filled with sarin gas. Can be fired from mortars.</description>
+    <graphicData>
+      <texPath>Weapons/Chem/sarinShell</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectileWhenLoaded>Bullet_Shell_Sarin</projectileWhenLoaded>
+    <costList>
+      <Shell_HighExplosive>1</Shell_HighExplosive>
+      <GasSarin>1</GasSarin>
+    </costList>
+    <tradeNeverStack>true</tradeNeverStack>
+  </ThingDef>
+  <!-- bullets -->
+  <ThingDef ParentName="ChemistryShellBulletBase">
+    <defName>Bullet_Shell_Chlorine</defName>
+    <label>chlorine gas shell</label>
+    <projectile>
+      <postExplosionSpawnThingDef>GasChlorine_Gas</postExplosionSpawnThingDef>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="ChemistryShellBulletBase">
+    <defName>Bullet_Shell_Mustard</defName>
+    <label>mustard gas shell</label>
+    <projectile>
+      <postExplosionSpawnThingDef>GasMustard_Gas</postExplosionSpawnThingDef>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="ChemistryShellBulletBase">
+    <defName>Bullet_Shell_Sarin</defName>
+    <label>sarin gas shell</label>
+    <projectile>
+      <postExplosionSpawnThingDef>GasSarin_Gas</postExplosionSpawnThingDef>
+    </projectile>
+  </ThingDef>
+</Defs>

@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BenchBase">
+    <defName>TableChemical</defName>
+    <label>chemical synthesizer</label>
+    <thingClass>Building_WorkTable</thingClass>
+    <description>Production facility for chemical compounds. Chemical compounds can be used to produce useful resources.</description>
+    <graphicData>
+      <texPath>Building/Chem/ChemPlant</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3.5,1.5)</drawSize>
+      <shaderType>CutoutComplex</shaderType>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <costList>
+      <Silver>500</Silver>
+      <Steel>150</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <altitudeLayer>Building</altitudeLayer>
+    <fillPercent>0.5</fillPercent>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <WorkToBuild>2000</WorkToBuild>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Cleanliness>-10</Cleanliness>
+    </statBases>
+    <size>(3,1)</size>
+    <designationCategory>Production</designationCategory>
+    <passability>PassThroughOnly</passability>
+    <pathCost>60</pathCost>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <surfaceType>Item</surfaceType>
+    <recipes>
+      <li>chemicalMake</li>
+      <li>chemicalMakeS</li>
+      <li>chemicalMakeN</li>
+      <li>chemicalMakeC</li>
+      <li>chemicalMakePl</li>
+      <li>chemicalMakeSi</li>
+      <li>chemicalMakeG</li>
+      <li>chemicalMakeU</li>
+      <li>chemicalMakeBulk</li>
+      <li>chemicalMakeLargeBulk</li>
+      <li>chemicalMakeRefined</li>
+      <li>chemicalMakeAnesthezineGas</li>
+      <li>chemicalMakeChlorineGas</li>
+      <li>chemicalMakeMustardGas</li>
+    </recipes>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+    </building>
+    <comps>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>ToolCabinet</li>
+        </linkableFacilities>
+      </li>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>200</basePowerConsumption>
+        <shortCircuitInRain>true</shortCircuitInRain>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Breakdownable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>4</glowRadius>
+        <glowColor>(153,204,0,0)</glowColor>
+      </li>
+    </comps>
+    <designationHotKey>Misc3</designationHotKey>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
+    <researchPrerequisites>
+      <li>Chemistry</li>
+    </researchPrerequisites>
+  </ThingDef>
+  <ThingDef ParentName="BenchBase">
+    <defName>TableMolecular</defName>
+    <label>molecular synthesizer</label>
+    <thingClass>Building_WorkTable</thingClass>
+    <description>Production facility for Ionic particle mass and synthetic materials.</description>
+    <graphicData>
+      <texPath>Building/Chem/MolecularPlant</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3.5,1.5)</drawSize>
+      <shaderType>CutoutComplex</shaderType>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <costList>
+      <Silver>750</Silver>
+      <Steel>50</Steel>
+      <Plasteel>50</Plasteel>
+      <Gold>50</Gold>
+      <ComponentIndustrial>6</ComponentIndustrial>
+    </costList>
+    <altitudeLayer>Building</altitudeLayer>
+    <fillPercent>0.5</fillPercent>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <WorkToBuild>4000</WorkToBuild>
+      <MaxHitPoints>150</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Cleanliness>-8</Cleanliness>
+    </statBases>
+    <size>(3,1)</size>
+    <designationCategory>Production</designationCategory>
+    <passability>PassThroughOnly</passability>
+    <pathCost>60</pathCost>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <surfaceType>Item</surfaceType>
+    <recipes>
+      <li>ionicMake</li>
+      <li>ionicMakeHW</li>
+      <li>ionicMakeST</li>
+      <li>ionicMakeMW</li>
+      <li>ionicMakeNC</li>
+      <li>ionicMakeSW</li>
+      <li>chemicalMakeSarinGas</li>
+    </recipes>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+    </building>
+    <comps>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>ToolCabinet</li>
+        </linkableFacilities>
+      </li>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>400</basePowerConsumption>
+        <shortCircuitInRain>true</shortCircuitInRain>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Breakdownable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>4</glowRadius>
+        <glowColor>(50,50,200,0)</glowColor>
+      </li>
+    </comps>
+    <designationHotKey>Misc3</designationHotKey>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
+    <researchPrerequisites>
+      <li>ChemistryDissolution</li>
+    </researchPrerequisites>
+  </ThingDef>
+  <ThingDef Name="ResourceBasedMom" Abstract="True">
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <useHitPoints>true</useHitPoints>
+    <selectable>true</selectable>
+    <altitudeLayer>Item</altitudeLayer>
+    <stackLimit>75</stackLimit>
+    <statBases>
+      <Beauty>-7</Beauty>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Forbiddable" />
+    </comps>
+    <alwaysHaulable>true</alwaysHaulable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <rotatable>false</rotatable>
+    <pathCost>15</pathCost>
+  </ThingDef>
+  <ThingDef ParentName="ResourceBasedMom">
+    <defName>Chemicals</defName>
+    <label>Chemicals</label>
+    <description>Container full of chemical compound.</description>
+    <graphicData>
+      <texPath>Resources/Chem/Chemicals</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>5</MaxHitPoints>
+      <MarketValue>1</MarketValue>
+      <Flammability>5.0</Flammability>
+      <Mass>1</Mass>
+      <Cleanliness>-10</Cleanliness>
+    </statBases>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <tradeNeverStack>true</tradeNeverStack>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>2</glowRadius>
+        <glowColor>(153,204,0,0)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="ResourceBasedMom">
+    <defName>RefinedChemicals</defName>
+    <label>Refined Chemicals</label>
+    <description>Container full of assorted chemical compounds.</description>
+    <graphicData>
+      <texPath>Resources/Chem/RefinedChemicals</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>5</MaxHitPoints>
+      <MarketValue>20</MarketValue>
+      <Flammability>10.0</Flammability>
+      <Mass>1</Mass>
+      <Cleanliness>-5</Cleanliness>
+    </statBases>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <tradeNeverStack>false</tradeNeverStack>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>2</glowRadius>
+        <glowColor>(220,220,220,0)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="ResourceBasedMom">
+    <defName>Ionic</defName>
+    <label>Magnetic container</label>
+    <description>Container full of ionic particle mass.</description>
+    <graphicData>
+      <texPath>Resources/Chem/IonicContainer</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>2</MaxHitPoints>
+      <MarketValue>50</MarketValue>
+      <Flammability>8.0</Flammability>
+      <Mass>1</Mass>
+      <Cleanliness>-2</Cleanliness>
+    </statBases>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <tradeNeverStack>false</tradeNeverStack>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>2</glowRadius>
+        <glowColor>(50,50,200,0)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="ResourceBase">
+    <defName>Molecularweave</defName>
+    <label>molecularweave</label>
+    <description>High-tech molecular-fibers woven into sheets. It is light and incredibly difficult to break. Hard, resistant to piercing but not fireproof.</description>
+    <graphicData>
+      <texPath>Resources/Chem/Molecularweave</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <MarketValue>54</MarketValue>
+      <Mass>0.008</Mass>
+      <Flammability>0.5</Flammability>
+      <DeteriorationRate>0.5</DeteriorationRate>
+      <StuffPower_Armor_Sharp>8.0</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>2.6</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>1.8</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>22</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>26</StuffPower_Insulation_Heat>
+    </statBases>
+    <stuffProps>
+      <categories>
+        <li>Fabric</li>
+      </categories>
+      <commonality>0.03</commonality>
+      <color>(60,60,180)</color>
+      <statFactors>
+        <WorkToMake>1.8</WorkToMake>
+      </statFactors>
+    </stuffProps>
+    <thingCategories>
+      <li>Textiles</li>
+    </thingCategories>
+  </ThingDef>
+  <ThingDef ParentName="ResourceBase">
+    <defName>Nanocomposite</defName>
+    <label>nanocomposite</label>
+    <description>Material carefully crafted from loose molecules to form a very light and hardened, heat and energy dissipating material.</description>
+    <graphicData>
+      <texPath>Resources/Chem/Nanocomposite</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <MarketValue>69</MarketValue>
+      <Mass>0.006</Mass>
+      <Flammability>0.4</Flammability>
+      <DeteriorationRate>0.3</DeteriorationRate>
+      <StuffPower_Armor_Sharp>9.1</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>3.1</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>5.8</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>20</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>64</StuffPower_Insulation_Heat>
+    </statBases>
+    <stuffProps>
+      <categories>
+        <li>Fabric</li>
+      </categories>
+      <commonality>0.01</commonality>
+      <color>(60,180,60)</color>
+      <statFactors>
+        <WorkToMake>1.8</WorkToMake>
+      </statFactors>
+    </stuffProps>
+    <thingCategories>
+      <li>Textiles</li>
+    </thingCategories>
+  </ThingDef>
+  <ThingDef ParentName="ResourceBase">
+    <defName>Smartweave</defName>
+    <label>smartweave</label>
+    <description>Fabric made from carbon nanofibers enhanced with nanites to provide perfect outdoor clothing material.</description>
+    <graphicData>
+      <texPath>Resources/Chem/Smartweave</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <MarketValue>28</MarketValue>
+      <Mass>0.01</Mass>
+      <Flammability>0.5</Flammability>
+      <DeteriorationRate>0.5</DeteriorationRate>
+      <StuffPower_Armor_Sharp>1.1</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>5.1</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>1.1</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>100</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>100</StuffPower_Insulation_Heat>
+    </statBases>
+    <stuffProps>
+      <categories>
+        <li>Fabric</li>
+      </categories>
+      <commonality>0.1</commonality>
+      <color>(10,10,10)</color>
+      <statFactors>
+        <WorkToMake>1.8</WorkToMake>
+      </statFactors>
+    </stuffProps>
+    <thingCategories>
+      <li>Textiles</li>
+    </thingCategories>
+  </ThingDef>
+</Defs>

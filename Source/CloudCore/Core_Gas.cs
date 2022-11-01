@@ -5,274 +5,273 @@ using UnityEngine;
 using Verse;
 using Random = System.Random;
 
-namespace CloudCore
+namespace CloudCore;
+
+public class Core_Gas : Thing
 {
-    public class Core_Gas : Thing
+    private const int MOVE_TICKS = 1;
+    private const int CHECK_TICKS = 5;
+    private const int WIND_SPEED_REDUCTION = 20;
+    private const int HIT_TICKS = 120;
+    private int checkGasTick;
+    public int destroyTick;
+
+    private Vector3 drawPosition;
+
+    public float graphicRotation;
+
+    public float graphicRotationSpeed;
+    private int hitTick;
+    public int intensity = 1;
+    private bool isStopped;
+
+    private int moveGasTick;
+    private Random rndUtil;
+    private List<Pawn> touchingPawns = new List<Pawn>();
+
+    private MapComponent_WindSpeed wsUtil;
+
+    public Core_Gas()
     {
-        private const int MOVE_TICKS = 1;
-        private const int CHECK_TICKS = 5;
-        private const int WIND_SPEED_REDUCTION = 20;
-        private const int HIT_TICKS = 120;
-        private int checkGasTick;
-        public int destroyTick;
+        wsUtil = null;
+        rndUtil = null;
+    }
 
-        private Vector3 drawPosition;
-
-        public float graphicRotation;
-
-        public float graphicRotationSpeed;
-        private int hitTick;
-        public int intensity = 1;
-        private bool isStopped;
-
-        private int moveGasTick;
-        private Random rndUtil;
-        private List<Pawn> touchingPawns = new List<Pawn>();
-
-        private MapComponent_WindSpeed wsUtil;
-
-        public Core_Gas()
+    private void Move_Gas(bool check)
+    {
+        if (wsUtil == null || Map == null || rndUtil == null)
         {
-            wsUtil = null;
-            rndUtil = null;
+            return;
         }
 
-        private void Move_Gas(bool check)
+        if (isStopped && !check)
         {
-            if (wsUtil == null || Map == null || rndUtil == null)
-            {
-                return;
-            }
+            return;
+        }
 
-            if (isStopped && !check)
-            {
-                return;
-            }
+        var isOutdoors = Position.UsesOutdoorTemperature(Map);
+        isStopped = false;
+        var newPos = drawPosition;
+        var rndWindSpeed = (float)rndUtil.NextDouble() / 5;
+        float windDirection;
+        float windSpeed;
+        if (isOutdoors)
+        {
+            // direction
+            var modifier = rndUtil.Next(19) - 10;
+            windDirection = wsUtil.windDirectionRad + (modifier * (float)Math.PI / 180f);
+            // speed
+            var modifierSpeed = rndUtil.Next(19) - 10;
+            windSpeed = wsUtil.windSpeed + rndWindSpeed;
+            windSpeed /= WIND_SPEED_REDUCTION + modifierSpeed;
+        }
+        else
+        {
+            windDirection = (float)rndUtil.Next(628) / 100;
+            windSpeed = rndWindSpeed / 2;
+        }
 
-            var isOutdoors = Position.UsesOutdoorTemperature(Map);
-            isStopped = false;
-            var newPos = drawPosition;
-            var rndWindSpeed = (float) rndUtil.NextDouble() / 5;
-            float windDirection;
-            float windSpeed;
-            if (isOutdoors)
+        newPos.x += (float)Math.Cos(windDirection) * windSpeed;
+        newPos.z += (float)Math.Sin(windDirection) * windSpeed;
+        var newPosInt = new IntVec3((int)Math.Round(newPos.x), (int)Math.Round(newPos.y),
+            (int)Math.Round(newPos.z));
+
+        // try to find gas on location
+        var thingList = newPosInt.GetThingList(Map);
+        if (thingList != null)
+        {
+            foreach (var thing in thingList)
             {
-                // direction
-                var modifier = rndUtil.Next(19) - 10;
-                windDirection = wsUtil.windDirectionRad + (modifier * (float) Math.PI / 180f);
-                // speed
-                var modifierSpeed = rndUtil.Next(19) - 10;
-                windSpeed = wsUtil.windSpeed + rndWindSpeed;
-                windSpeed /= WIND_SPEED_REDUCTION + modifierSpeed;
-            }
-            else
-            {
-                windDirection = (float) rndUtil.Next(628) / 100;
+                if (thing is not Core_Gas)
+                {
+                    continue;
+                }
+
+                windDirection = (float)rndUtil.Next(628) / 100;
                 windSpeed = rndWindSpeed / 2;
-            }
 
-            newPos.x += (float) Math.Cos(windDirection) * windSpeed;
-            newPos.z += (float) Math.Sin(windDirection) * windSpeed;
-            var newPosInt = new IntVec3((int) Math.Round(newPos.x), (int) Math.Round(newPos.y),
-                (int) Math.Round(newPos.z));
-
-            // try to find gas on location
-            var thingList = newPosInt.GetThingList(Map);
-            if (thingList != null)
-            {
-                foreach (var thing in thingList)
-                {
-                    if (thing is not Core_Gas)
-                    {
-                        continue;
-                    }
-
-                    windDirection = (float) rndUtil.Next(628) / 100;
-                    windSpeed = rndWindSpeed / 2;
-
-                    newPos.x += (float) Math.Cos(windDirection) * windSpeed;
-                    newPos.z += (float) Math.Sin(windDirection) * windSpeed;
-                    newPosInt = new IntVec3((int) Math.Round(newPos.x), (int) Math.Round(newPos.y),
-                        (int) Math.Round(newPos.z));
-                }
-            }
-
-            if (newPosInt != Position)
-            {
-                if (!newPosInt.InBounds(Map))
-                {
-                    isStopped = true;
-                    Destroy();
-                }
-                else
-                {
-                    var th = newPosInt.GetRoofHolderOrImpassable(Map);
-                    if (th != null && !(th is Building_Vent))
-                    {
-                        isStopped = true;
-                    }
-                }
-            }
-
-            if (isStopped)
-            {
-                return;
-            }
-
-            drawPosition = newPos;
-            Position = newPosInt;
-        }
-
-        public override void Draw()
-        {
-            var mesh = MeshPool.GridPlane(def.graphicData.drawSize);
-            Graphics.DrawMesh(mesh, drawPosition, Quaternion.AngleAxis(graphicRotation, Vector3.up), def.DrawMatSingle,
-                0);
-        }
-
-        public override void SpawnSetup(Map map, bool respawningAfterLoad)
-        {
-            /*Gas gasOnPos = this.Position.GetGas (map);
-            var chemistry_Gas = gasOnPos as Core_Gas;
-            if (chemistry_Gas != null) {
-                this.intensity += chemistry_Gas.intensity;
-            }*/
-            base.SpawnSetup(map, respawningAfterLoad);
-            rndUtil = new Random(thingIDNumber);
-            destroyTick = Find.TickManager.TicksGame + def.gas.expireSeconds.RandomInRange.SecondsToTicks();
-            graphicRotationSpeed = Rand.Range(-def.gas.rotationSpeed, def.gas.rotationSpeed) / 60;
-            var exactPos = this.TrueCenter();
-            exactPos.x += (float) rndUtil.NextDouble() - 0.5f;
-            exactPos.z += (float) rndUtil.NextDouble() - 0.5f;
-            drawPosition = exactPos;
-            wsUtil = (MapComponent_WindSpeed) Map.GetComponent(typeof(MapComponent_WindSpeed));
-        }
-
-        public override void ExposeData()
-        {
-            base.ExposeData();
-            Scribe_Values.Look(ref destroyTick, "destroyTick");
-            Scribe_Collections.Look(ref touchingPawns, "testees", LookMode.Reference);
-        }
-
-        private void ApplyGas(Pawn p)
-        {
-            // get damage def
-            var dDef = DefDatabase<DamageDef>.GetNamed(def.projectile.damageDef.ToString());
-
-            var preventGas = false;
-
-            if (p.apparel != null)
-            {
-                var wornApparel = p.apparel.WornApparel;
-                foreach (var item in wornApparel)
-                {
-                    var ext = item.def.GetModExtension<GasProtectionExtension>() ??
-                              GasProtectionExtension.defaultValues;
-
-                    if (ext.efficiency > 0)
-                    {
-                        preventGas = true;
-                    }
-                }
-            }
-
-            if (!preventGas)
-            {
-                Log.Message("gas not prevented");
-                if (def.projectile.GetDamageAmount(1f) > 0)
-                {
-                    // gas does physical damage
-                    // generate injury and add it to pawn
-                    var num = def.projectile.GetDamageAmount(1f);
-                    var height = Rand.Value >= 0.666 ? BodyPartHeight.Middle : BodyPartHeight.Top;
-                    float armorPenetration = 0;
-
-                    var dinfo = new DamageInfo(dDef, num, armorPenetration, -1, this);
-
-                    dinfo.SetBodyRegion(height, BodyPartDepth.Outside);
-
-                    p.TakeDamage(dinfo);
-                }
-                else
-                {
-                    // gas does no physical damage
-                    // get hediff def
-                    var hDef = DefDatabase<HediffDef>.GetNamed(dDef.hediff.ToString());
-
-                    // add hediff to pawn
-                    p.health.AddHediff(HediffMaker.MakeHediff(hDef, p));
-                }
-            }
-            else
-            {
-                Log.Message("gas prevented");
+                newPos.x += (float)Math.Cos(windDirection) * windSpeed;
+                newPos.z += (float)Math.Sin(windDirection) * windSpeed;
+                newPosInt = new IntVec3((int)Math.Round(newPos.x), (int)Math.Round(newPos.y),
+                    (int)Math.Round(newPos.z));
             }
         }
 
-        public override void Tick()
+        if (newPosInt != Position)
         {
-            if (!Spawned)
+            if (!newPosInt.InBounds(Map))
             {
-                return;
-            }
-
-            if (destroyTick <= Find.TickManager.TicksGame)
-            {
+                isStopped = true;
                 Destroy();
             }
             else
             {
-                graphicRotation += graphicRotationSpeed + rndUtil.Next(5) - 3;
-
-                if (hitTick > HIT_TICKS)
+                var th = newPosInt.GetRoofHolderOrImpassable(Map);
+                if (th != null && th is not Building_Vent)
                 {
-                    var thingList = Position.GetThingList(Map);
-                    if (thingList != null)
-                    {
-                        foreach (var thing in thingList)
-                        {
-                            if (thing is not Pawn pawn || touchingPawns.Contains(pawn) || pawn.Dead)
-                            {
-                                continue;
-                            }
-
-                            touchingPawns.Add(pawn);
-                            ApplyGas(pawn);
-                            hitTick = 0;
-                        }
-                    }
-
-                    for (var j = 0; j < touchingPawns.Count; j++)
-                    {
-                        var pawn2 = touchingPawns[j];
-                        if (!pawn2.Spawned || pawn2.Position != Position)
-                        {
-                            touchingPawns.Remove(pawn2);
-                        }
-                    }
+                    isStopped = true;
                 }
-                else
-                {
-                    hitTick++;
-                }
-
-                if (moveGasTick > MOVE_TICKS)
-                {
-                    moveGasTick = 0;
-                    var check = false;
-                    if (checkGasTick > CHECK_TICKS)
-                    {
-                        checkGasTick = 0;
-                        check = true;
-                    }
-
-                    Move_Gas(check);
-                }
-
-                moveGasTick++;
-                checkGasTick++;
             }
+        }
+
+        if (isStopped)
+        {
+            return;
+        }
+
+        drawPosition = newPos;
+        Position = newPosInt;
+    }
+
+    public override void Draw()
+    {
+        var mesh = MeshPool.GridPlane(def.graphicData.drawSize);
+        Graphics.DrawMesh(mesh, drawPosition, Quaternion.AngleAxis(graphicRotation, Vector3.up), def.DrawMatSingle,
+            0);
+    }
+
+    public override void SpawnSetup(Map map, bool respawningAfterLoad)
+    {
+        /*Gas gasOnPos = this.Position.GetGas (map);
+        var chemistry_Gas = gasOnPos as Core_Gas;
+        if (chemistry_Gas != null) {
+            this.intensity += chemistry_Gas.intensity;
+        }*/
+        base.SpawnSetup(map, respawningAfterLoad);
+        rndUtil = new Random(thingIDNumber);
+        destroyTick = Find.TickManager.TicksGame + def.gas.expireSeconds.RandomInRange.SecondsToTicks();
+        graphicRotationSpeed = Rand.Range(-def.gas.rotationSpeed, def.gas.rotationSpeed) / 60;
+        var exactPos = this.TrueCenter();
+        exactPos.x += (float)rndUtil.NextDouble() - 0.5f;
+        exactPos.z += (float)rndUtil.NextDouble() - 0.5f;
+        drawPosition = exactPos;
+        wsUtil = (MapComponent_WindSpeed)Map.GetComponent(typeof(MapComponent_WindSpeed));
+    }
+
+    public override void ExposeData()
+    {
+        base.ExposeData();
+        Scribe_Values.Look(ref destroyTick, "destroyTick");
+        Scribe_Collections.Look(ref touchingPawns, "testees", LookMode.Reference);
+    }
+
+    private void ApplyGas(Pawn p)
+    {
+        // get damage def
+        var dDef = DefDatabase<DamageDef>.GetNamed(def.projectile.damageDef.ToString());
+
+        var preventGas = false;
+
+        if (p.apparel != null)
+        {
+            var wornApparel = p.apparel.WornApparel;
+            foreach (var item in wornApparel)
+            {
+                var ext = item.def.GetModExtension<GasProtectionExtension>() ??
+                          GasProtectionExtension.defaultValues;
+
+                if (ext.efficiency > 0)
+                {
+                    preventGas = true;
+                }
+            }
+        }
+
+        if (!preventGas)
+        {
+            Log.Message("gas not prevented");
+            if (def.projectile.GetDamageAmount(1f) > 0)
+            {
+                // gas does physical damage
+                // generate injury and add it to pawn
+                var num = def.projectile.GetDamageAmount(1f);
+                var height = Rand.Value >= 0.666 ? BodyPartHeight.Middle : BodyPartHeight.Top;
+                float armorPenetration = 0;
+
+                var dinfo = new DamageInfo(dDef, num, armorPenetration, -1, this);
+
+                dinfo.SetBodyRegion(height, BodyPartDepth.Outside);
+
+                p.TakeDamage(dinfo);
+            }
+            else
+            {
+                // gas does no physical damage
+                // get hediff def
+                var hDef = DefDatabase<HediffDef>.GetNamed(dDef.hediff.ToString());
+
+                // add hediff to pawn
+                p.health.AddHediff(HediffMaker.MakeHediff(hDef, p));
+            }
+        }
+        else
+        {
+            Log.Message("gas prevented");
+        }
+    }
+
+    public override void Tick()
+    {
+        if (!Spawned)
+        {
+            return;
+        }
+
+        if (destroyTick <= Find.TickManager.TicksGame)
+        {
+            Destroy();
+        }
+        else
+        {
+            graphicRotation += graphicRotationSpeed + rndUtil.Next(5) - 3;
+
+            if (hitTick > HIT_TICKS)
+            {
+                var thingList = Position.GetThingList(Map);
+                if (thingList != null)
+                {
+                    foreach (var thing in thingList)
+                    {
+                        if (thing is not Pawn pawn || touchingPawns.Contains(pawn) || pawn.Dead)
+                        {
+                            continue;
+                        }
+
+                        touchingPawns.Add(pawn);
+                        ApplyGas(pawn);
+                        hitTick = 0;
+                    }
+                }
+
+                for (var j = 0; j < touchingPawns.Count; j++)
+                {
+                    var pawn2 = touchingPawns[j];
+                    if (!pawn2.Spawned || pawn2.Position != Position)
+                    {
+                        touchingPawns.Remove(pawn2);
+                    }
+                }
+            }
+            else
+            {
+                hitTick++;
+            }
+
+            if (moveGasTick > MOVE_TICKS)
+            {
+                moveGasTick = 0;
+                var check = false;
+                if (checkGasTick > CHECK_TICKS)
+                {
+                    checkGasTick = 0;
+                    check = true;
+                }
+
+                Move_Gas(check);
+            }
+
+            moveGasTick++;
+            checkGasTick++;
         }
     }
 }

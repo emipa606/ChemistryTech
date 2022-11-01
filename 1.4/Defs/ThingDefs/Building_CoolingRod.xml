@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="FurnitureBase">
+    <defName>Coolant_Rod</defName>
+    <label>coolant rod</label>
+    <description>Metallic rod filled with heat absorbing chemical.</description>
+    <category>Building</category>
+    <graphicData>
+      <texPath>Building/Chem/CoolingRod</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawRotated>false</drawRotated>
+      <damageData>
+        <rect>(0.35,0.35,0.3,0.3)</rect>
+      </damageData>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>8</pathCost>
+    <constructEffect>ConstructMetal</constructEffect>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <fillPercent>0.15</fillPercent>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToBuild>500</WorkToBuild>
+      <Flammability>0</Flammability>
+      <Mass>10</Mass>
+    </statBases>
+    <selectable>true</selectable>
+    <costList>
+      <Silver>50</Silver>
+      <Steel>10</Steel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+      <Chemicals>10</Chemicals>
+    </costList>
+    <soundImpactDefault>BulletImpact_Ground</soundImpactDefault>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <resourcesFractionWhenDeconstructed>0.75</resourcesFractionWhenDeconstructed>
+    <placeWorkers>
+      <li>PlaceWorker_CoolerSimple</li>
+    </placeWorkers>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>2</glowRadius>
+        <glowColor>(100,100,150,0)</glowColor>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <heatPerSecond>-2</heatPerSecond>
+        <heatPushMinTemperature>-10</heatPushMinTemperature>
+      </li>
+    </comps>
+    <designationCategory>Furniture</designationCategory>
+    <researchPrerequisites>
+      <li>Chemistry</li>
+    </researchPrerequisites>
+  </ThingDef>
+  <ThingDef ParentName="FurnitureBase">
+    <defName>Charged_Coolant_Rod</defName>
+    <label>charged coolant rod</label>
+    <description>Metallic rod filled with heat absorbing chemical.</description>
+    <category>Building</category>
+    <graphicData>
+      <texPath>Building/Chem/CoolingRod2</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawRotated>false</drawRotated>
+      <damageData>
+        <rect>(0.35,0.35,0.3,0.3)</rect>
+      </damageData>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>8</pathCost>
+    <constructEffect>ConstructMetal</constructEffect>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <fillPercent>0.15</fillPercent>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToBuild>750</WorkToBuild>
+      <Flammability>0</Flammability>
+      <Mass>10</Mass>
+    </statBases>
+    <selectable>true</selectable>
+    <costList>
+      <Silver>75</Silver>
+      <Steel>15</Steel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+      <Chemicals>25</Chemicals>
+    </costList>
+    <soundImpactDefault>BulletImpact_Ground</soundImpactDefault>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <resourcesFractionWhenDeconstructed>0.75</resourcesFractionWhenDeconstructed>
+    <placeWorkers>
+      <li>PlaceWorker_CoolerSimple</li>
+    </placeWorkers>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>3</glowRadius>
+        <glowColor>(100,100,150,0)</glowColor>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <heatPerSecond>-3</heatPerSecond>
+        <heatPushMinTemperature>-35</heatPushMinTemperature>
+      </li>
+    </comps>
+    <designationCategory>Furniture</designationCategory>
+    <researchPrerequisites>
+      <li>ChemistryDissolution</li>
+    </researchPrerequisites>
+  </ThingDef>
+  <ThingDef ParentName="FurnitureBase">
+    <defName>Supercharged_Coolant_Rod</defName>
+    <label>supercharged coolant rod</label>
+    <description>Metallic rod filled with heat absorbing chemical.</description>
+    <category>Building</category>
+    <graphicData>
+      <texPath>Building/Chem/CoolingRod3</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawRotated>false</drawRotated>
+      <damageData>
+        <rect>(0.35,0.35,0.3,0.3)</rect>
+      </damageData>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>8</pathCost>
+    <constructEffect>ConstructMetal</constructEffect>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <fillPercent>0.15</fillPercent>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToBuild>1000</WorkToBuild>
+      <Flammability>0</Flammability>
+      <Mass>10</Mass>
+    </statBases>
+    <selectable>true</selectable>
+    <costList>
+      <Silver>100</Silver>
+      <Steel>25</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+      <Chemicals>50</Chemicals>
+    </costList>
+    <soundImpactDefault>BulletImpact_Ground</soundImpactDefault>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <resourcesFractionWhenDeconstructed>0.75</resourcesFractionWhenDeconstructed>
+    <placeWorkers>
+      <li>PlaceWorker_CoolerSimple</li>
+    </placeWorkers>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>2</glowRadius>
+        <glowColor>(100,100,150,0)</glowColor>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <heatPerSecond>-4</heatPerSecond>
+        <heatPushMinTemperature>-100</heatPushMinTemperature>
+      </li>
+    </comps>
+    <designationCategory>Furniture</designationCategory>
+    <researchPrerequisites>
+      <li>ChemistryRecombination</li>
+    </researchPrerequisites>
+  </ThingDef>
+</Defs>
