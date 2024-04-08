@@ -6,5 +6,5 @@ public class GasProtectionExtension : DefModExtension
 {
     public static readonly GasProtectionExtension defaultValues = new GasProtectionExtension();
 
-    public float efficiency = 0f;
+    public readonly float efficiency = 0f;
 }

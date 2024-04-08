@@ -27,7 +27,7 @@ public class Core_Gas : Thing
 
     private int moveGasTick;
     private Random rndUtil;
-    private List<Pawn> touchingPawns = new List<Pawn>();
+    private List<Pawn> touchingPawns = [];
 
     private MapComponent_WindSpeed wsUtil;
 
@@ -123,10 +123,11 @@ public class Core_Gas : Thing
         Position = newPosInt;
     }
 
-    public override void Draw()
+
+    protected override void DrawAt(Vector3 drawLoc, bool flip = false)
     {
         var mesh = MeshPool.GridPlane(def.graphicData.drawSize);
-        Graphics.DrawMesh(mesh, drawPosition, Quaternion.AngleAxis(graphicRotation, Vector3.up), def.DrawMatSingle,
+        Graphics.DrawMesh(mesh, drawLoc, Quaternion.AngleAxis(graphicRotation, Vector3.up), def.DrawMatSingle,
             0);
     }
 

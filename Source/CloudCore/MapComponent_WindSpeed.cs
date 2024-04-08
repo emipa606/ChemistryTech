@@ -3,7 +3,7 @@ using Verse;
 
 namespace CloudCore;
 
-public class MapComponent_WindSpeed : MapComponent
+public class MapComponent_WindSpeed(Map map) : MapComponent(map)
 {
     private const int WIND_SPEED_TICKS = 60;
 
@@ -15,10 +15,6 @@ public class MapComponent_WindSpeed : MapComponent
 
     public float windDirectionRad;
     public float windSpeed;
-
-    public MapComponent_WindSpeed(Map map) : base(map)
-    {
-    }
 
     private float GetNewWindDirection()
     {

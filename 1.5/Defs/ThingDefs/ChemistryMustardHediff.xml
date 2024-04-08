@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="Core_Gas">
+    <defName>GasMustard_Gas</defName>
+    <label>mustard gas</label>
+    <graphicData>
+      <texPath>Things/Gas/Puff</texPath>
+      <drawSize>2.2</drawSize>
+      <color>(0.95,0.92,0,0.7)</color>
+    </graphicData>
+    <gas>
+      <expireSeconds>
+        <min>60</min>
+        <max>360</max>
+      </expireSeconds>
+    </gas>
+    <projectile>
+      <damageDef>MustardGasExposure</damageDef>
+      <damageAmountBase>0</damageAmountBase>
+    </projectile>
+  </ThingDef>
+  <DamageDef>
+    <defName>MustardGasExposure</defName>
+    <label>yperite poisoning</label>
+    <externalViolence>false</externalViolence>
+    <deathMessage>{0} has succumbed to yperite exposure.</deathMessage>
+    <hediff>MustardExposure</hediff>
+  </DamageDef>
+  <HediffDef ParentName="InfectionBase">
+    <defName>MustardExposure</defName>
+    <label>yperite poisoning</label>
+    <description>yperite poisoning</description>
+    <labelNoun>a poisoning</labelNoun>
+    <makesSickThought>true</makesSickThought>
+    <defaultLabelColor>(0.95, 0.92, 0)</defaultLabelColor>
+    <initialSeverity>0.2</initialSeverity>
+    <tendable>true</tendable>
+    <comps>
+      <li Class="HediffCompProperties_Discoverable">
+        <sendLetterWhenDiscovered>true</sendLetterWhenDiscovered>
+      </li>
+      <li Class="HediffCompProperties_TendDuration">
+        <baseTendDurationHours>6</baseTendDurationHours>
+        <severityPerDayTended>-0.1</severityPerDayTended>
+        <disappearsAtTotalTendQuality>6</disappearsAtTotalTendQuality>
+      </li>
+      <li Class="HediffCompProperties_Immunizable">
+        <severityPerDayNotImmune>0.3</severityPerDayNotImmune>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>minor</label>
+        <painOffset>0.00</painOffset>
+        <capMods>
+          <li>
+            <capacity>Metabolism</capacity>
+            <offset>-0.1</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.3</minSeverity>
+        <label>major</label>
+        <painOffset>0.1</painOffset>
+        <capMods>
+          <li>
+            <capacity>Metabolism</capacity>
+            <offset>-0.2</offset>
+          </li>
+          <li>
+            <capacity>BloodFiltration</capacity>
+            <offset>-0.2</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.7</minSeverity>
+        <label>extreme</label>
+        <lifeThreatening>true</lifeThreatening>
+        <painOffset>0.3</painOffset>
+        <capMods>
+          <li>
+            <capacity>Metabolism</capacity>
+            <offset>-0.5</offset>
+          </li>
+          <li>
+            <capacity>BloodFiltration</capacity>
+            <offset>-0.5</offset>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.2</offset>
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.4</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.87</minSeverity>
+        <label>severe</label>
+        <lifeThreatening>true</lifeThreatening>
+        <painOffset>0.9</painOffset>
+        <capMods>
+          <li>
+            <capacity>Metabolism</capacity>
+            <offset>-0.9</offset>
+          </li>
+          <li>
+            <capacity>BloodFiltration</capacity>
+            <offset>-0.9</offset>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.5</offset>
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.9</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+</Defs>
