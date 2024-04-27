@@ -28,6 +28,7 @@
     </statBases>
     <equippedStatOffsets>
       <PainShockThreshold>0.10</PainShockThreshold>
+      <ToxicEnvironmentResistance>0.8</ToxicEnvironmentResistance>
     </equippedStatOffsets>
     <apparel>
       <bodyPartGroups>
