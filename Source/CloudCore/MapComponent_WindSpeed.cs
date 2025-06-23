@@ -11,15 +11,15 @@ public class MapComponent_WindSpeed(Map map) : MapComponent(map)
 
     private int tickCounterSpd, tickCounterDir;
 
-    public float windDirection;
+    public float WindDirection;
 
-    public float windDirectionRad;
-    public float windSpeed;
+    public float WindDirectionRad;
+    public float WindSpeed;
 
-    private float GetNewWindDirection()
+    private float getNewWindDirection()
     {
         var rnd = new Random();
-        var newDir = windDirection + (((rnd.Next(2) * 2) - 1) * rnd.Next(5));
+        var newDir = WindDirection + (((rnd.Next(2) * 2) - 1) * rnd.Next(5));
         switch (newDir)
         {
             case > 359:
@@ -37,15 +37,15 @@ public class MapComponent_WindSpeed(Map map) : MapComponent(map)
     {
         if (tickCounterSpd > WIND_SPEED_TICKS)
         {
-            windSpeed = map.windManager.WindSpeed;
+            WindSpeed = map.windManager.WindSpeed;
             tickCounterSpd = 0;
             if (tickCounterDir <= WIND_DIRECTION_TICKS)
             {
                 return;
             }
 
-            windDirection = GetNewWindDirection();
-            windDirectionRad = (float)(Math.PI * windDirection / 180f);
+            WindDirection = getNewWindDirection();
+            WindDirectionRad = (float)(Math.PI * WindDirection / 180f);
             tickCounterDir = 0;
         }
         else

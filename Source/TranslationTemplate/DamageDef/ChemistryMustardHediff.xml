@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: yperite poisoning -->
+  <MustardGasExposure.label>yperite poisoning</MustardGasExposure.label>
+  <!-- EN: {0} has succumbed to yperite exposure. -->
+  <MustardGasExposure.deathMessage>{0} has succumbed to yperite exposure.</MustardGasExposure.deathMessage>
+</LanguageData>

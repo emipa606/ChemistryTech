@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: create anesthezine -->
+  <chemicalMakeAnesthezineGas.label>create anesthezine</chemicalMakeAnesthezineGas.label>
+  <!-- EN: Fill gas tank with anesthezine gas. -->
+  <chemicalMakeAnesthezineGas.description>Fill gas tank with anesthezine gas.</chemicalMakeAnesthezineGas.description>
+  <!-- EN: Filling tank. -->
+  <chemicalMakeAnesthezineGas.jobString>Filling tank.</chemicalMakeAnesthezineGas.jobString>
+  <!-- EN: create chlorine gas -->
+  <chemicalMakeChlorineGas.label>create chlorine gas</chemicalMakeChlorineGas.label>
+  <!-- EN: Fill gas tank with chlorine gas. -->
+  <chemicalMakeChlorineGas.description>Fill gas tank with chlorine gas.</chemicalMakeChlorineGas.description>
+  <!-- EN: Filling tank. -->
+  <chemicalMakeChlorineGas.jobString>Filling tank.</chemicalMakeChlorineGas.jobString>
+  <!-- EN: create mustard gas -->
+  <chemicalMakeMustardGas.label>create mustard gas</chemicalMakeMustardGas.label>
+  <!-- EN: Fill gas tank with mustard gas. -->
+  <chemicalMakeMustardGas.description>Fill gas tank with mustard gas.</chemicalMakeMustardGas.description>
+  <!-- EN: Filling tank. -->
+  <chemicalMakeMustardGas.jobString>Filling tank.</chemicalMakeMustardGas.jobString>
+  <!-- EN: create sarin gas -->
+  <chemicalMakeSarinGas.label>create sarin gas</chemicalMakeSarinGas.label>
+  <!-- EN: Fill gas tank with sarin gas. -->
+  <chemicalMakeSarinGas.description>Fill gas tank with sarin gas.</chemicalMakeSarinGas.description>
+  <!-- EN: Filling tank. -->
+  <chemicalMakeSarinGas.jobString>Filling tank.</chemicalMakeSarinGas.jobString>
+</LanguageData>

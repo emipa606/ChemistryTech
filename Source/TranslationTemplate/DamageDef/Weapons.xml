@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: chemical burn -->
+  <ChemBlast.label>chemical burn</ChemBlast.label>
+  <!-- EN: {0} has succumbed to chemical exposure. -->
+  <ChemBlast.deathMessage>{0} has succumbed to chemical exposure.</ChemBlast.deathMessage>
+</LanguageData>

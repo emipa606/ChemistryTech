@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: charged coolant rod -->
+  <Charged_Coolant_Rod.label>charged coolant rod</Charged_Coolant_Rod.label>
+  <!-- EN: Metallic rod filled with heat absorbing chemical. -->
+  <Charged_Coolant_Rod.description>Metallic rod filled with heat absorbing chemical.</Charged_Coolant_Rod.description>
+  <!-- EN: coolant rod -->
+  <Coolant_Rod.label>coolant rod</Coolant_Rod.label>
+  <!-- EN: Metallic rod filled with heat absorbing chemical. -->
+  <Coolant_Rod.description>Metallic rod filled with heat absorbing chemical.</Coolant_Rod.description>
+  <!-- EN: supercharged coolant rod -->
+  <Supercharged_Coolant_Rod.label>supercharged coolant rod</Supercharged_Coolant_Rod.label>
+  <!-- EN: Metallic rod filled with heat absorbing chemical. -->
+  <Supercharged_Coolant_Rod.description>Metallic rod filled with heat absorbing chemical.</Supercharged_Coolant_Rod.description>
+</LanguageData>

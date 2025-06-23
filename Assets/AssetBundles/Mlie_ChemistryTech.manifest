@@ -1,0 +1,51 @@
+ManifestFileVersion: 0
+CRC: 3629914614
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 640f59766db36b27f932720640b74939
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 2612ac43db082a73502ee80f2eceb73f
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 640f59766db36b27f932720640b74939
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Data/Mlie.ChemistryTech/Textures/Resources/Chem/Nanocomposite.png
+- Assets/Data/Mlie.ChemistryTech/Textures/Resources/Chem/GasSarin.png
+- Assets/Data/Mlie.ChemistryTech/Textures/Weapons/Chem/mustardShell.png
+- Assets/Data/Mlie.ChemistryTech/Textures/Weapons/Chem/chemLauncher.png
+- Assets/Data/Mlie.ChemistryTech/Textures/Resources/Chem/IonicContainer.png
+- Assets/Data/Mlie.ChemistryTech/Textures/Building/Chem/CoolingRod3.png
+- Assets/Data/Mlie.ChemistryTech/Textures/Building/Chem/MolecularPlant.png
+- Assets/Data/Mlie.ChemistryTech/Textures/Gear/Chem/gasmask/GasMask_north.png
+- Assets/Data/Mlie.ChemistryTech/Textures/Resources/Chem/GasChlorine.png
+- Assets/Data/Mlie.ChemistryTech/Textures/Resources/Chem/Molecularweave.png
+- Assets/Data/Mlie.ChemistryTech/Textures/Weapons/Chem/carbonFiberEmmiter.png
+- Assets/Data/Mlie.ChemistryTech/Textures/Weapons/Chem/ChemProjectile.png
+- Assets/Data/Mlie.ChemistryTech/Textures/Building/Chem/BombChlorine.png
+- Assets/Data/Mlie.ChemistryTech/Textures/Resources/Chem/GasMustard.png
+- Assets/Data/Mlie.ChemistryTech/Textures/Building/Chem/ChemPlant.png
+- Assets/Data/Mlie.ChemistryTech/Textures/Gear/Chem/gasmask/GasMask.png
+- Assets/Data/Mlie.ChemistryTech/Textures/Resources/Chem/Smartweave.png
+- Assets/Data/Mlie.ChemistryTech/Textures/Building/Misc/HeliumTank.png
+- Assets/Data/Mlie.ChemistryTech/Textures/Resources/Chem/GasAnesthezine.png
+- Assets/Data/Mlie.ChemistryTech/Textures/Gear/Chem/gasmask/GasMask_east.png
+- Assets/Data/Mlie.ChemistryTech/Textures/Resources/Chem/RefinedChemicals.png
+- Assets/Data/Mlie.ChemistryTech/Textures/Building/Chem/CoolingRod.png
+- Assets/Data/Mlie.ChemistryTech/Textures/Weapons/Chem/CarbonFiberProjectile.png
+- Assets/Data/Mlie.ChemistryTech/Textures/Building/Chem/BombAnesthezine.png
+- Assets/Data/Mlie.ChemistryTech/Textures/Resources/Chem/Chemicals.png
+- Assets/Data/Mlie.ChemistryTech/Textures/Weapons/Chem/sarinShell.png
+- Assets/Data/Mlie.ChemistryTech/Textures/Building/Chem/BombSarin.png
+- Assets/Data/Mlie.ChemistryTech/Textures/Gear/Chem/gasmask/GasMask_south.png
+- Assets/Data/Mlie.ChemistryTech/Textures/Building/Chem/ChemfuelGenerator.png
+- Assets/Data/Mlie.ChemistryTech/Textures/Building/Chem/BombMustard.png
+- Assets/Data/Mlie.ChemistryTech/Textures/Weapons/Chem/chlorineShell.png
+- Assets/Data/Mlie.ChemistryTech/Textures/Building/Chem/CoolingRod2.png
+Dependencies: []

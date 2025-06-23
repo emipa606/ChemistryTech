@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: chemical blob -->
+  <Bullet_ChemLauncher.label>chemical blob</Bullet_ChemLauncher.label>
+  <!-- EN: nanobullet -->
+  <Bullet_Nano_Emitter.label>nanobullet</Bullet_Nano_Emitter.label>
+  <!-- EN: chemical launcher -->
+  <Gun_chemLauncher.label>chemical launcher</Gun_chemLauncher.label>
+  <!-- EN: chemical mass launcher. Causes severe chemical burns -->
+  <Gun_chemLauncher.description>chemical mass launcher. Causes severe chemical burns</Gun_chemLauncher.description>
+  <!-- EN: chemical launcher -->
+  <Gun_chemLauncher.verbs.Verb_Shoot.label>chemical launcher</Gun_chemLauncher.verbs.Verb_Shoot.label>
+  <!-- EN: carbon-mass emitter -->
+  <Gun_nanoLauncher.label>carbon-mass emitter</Gun_nanoLauncher.label>
+  <!-- EN: Small portable mass-driver which propels small amounts of carbon fiber material at high speeds, ensuring low falloff and high accuracy at longer ranges. -->
+  <Gun_nanoLauncher.description>Small portable mass-driver which propels small amounts of carbon fiber material at high speeds, ensuring low falloff and high accuracy at longer ranges.</Gun_nanoLauncher.description>
+  <!-- EN: carbon-mass emitter -->
+  <Gun_nanoLauncher.verbs.Verb_Shoot.label>carbon-mass emitter</Gun_nanoLauncher.verbs.Verb_Shoot.label>
+</LanguageData>

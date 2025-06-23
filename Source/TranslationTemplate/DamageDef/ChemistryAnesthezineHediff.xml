@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: sedated -->
+  <AnesthezineGasExposure.label>sedated</AnesthezineGasExposure.label>
+  <!-- EN: {0} has succumbed to anesthezine exposure. -->
+  <AnesthezineGasExposure.deathMessage>{0} has succumbed to anesthezine exposure.</AnesthezineGasExposure.deathMessage>
+</LanguageData>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: gas poisoning -->
+  <GasExposure.label>gas poisoning</GasExposure.label>
+  <!-- EN: gas poisoning -->
+  <GasExposure.description>gas poisoning</GasExposure.description>
+  <!-- EN: {0} has succumbed to gas exposure. -->
+  <GasExposure.deathMessage>{0} has succumbed to gas exposure.</GasExposure.deathMessage>
+</LanguageData>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: chemistry -->
+  <Chemistry.label>chemistry</Chemistry.label>
+  <!-- EN: Learn to produce basic chemical compounds. -->
+  <Chemistry.description>Learn to produce basic chemical compounds.</Chemistry.description>
+  <!-- EN: chemical manufacture -->
+  <ChemistryChems.label>chemical manufacture</ChemistryChems.label>
+  <!-- EN: Production of basic chemical for drug production. -->
+  <ChemistryChems.description>Production of basic chemical for drug production.</ChemistryChems.description>
+  <!-- EN: chemical dissolution -->
+  <ChemistryDissolution.label>chemical dissolution</ChemistryDissolution.label>
+  <!-- EN: Break down complex chemical molecules to ionic mass. -->
+  <ChemistryDissolution.description>Break down complex chemical molecules to ionic mass.</ChemistryDissolution.description>
+  <!-- EN: fiber fabrication -->
+  <ChemistryFabrics.label>fiber fabrication</ChemistryFabrics.label>
+  <!-- EN: Production of advanced synthetic materials. -->
+  <ChemistryFabrics.description>Production of advanced synthetic materials.</ChemistryFabrics.description>
+  <!-- EN: gas production -->
+  <ChemistryGases.label>gas production</ChemistryGases.label>
+  <!-- EN: Production and storage of gaseous substances. -->
+  <ChemistryGases.description>Production and storage of gaseous substances.</ChemistryGases.description>
+  <!-- EN: chlorine gas -->
+  <ChemistryGasesChlorine.label>chlorine gas</ChemistryGasesChlorine.label>
+  <!-- EN: Chlorine is a yellow-green gas at room temperature. It is an extremely reactive element and a strong oxidising agent. -->
+  <ChemistryGasesChlorine.description>Chlorine is a yellow-green gas at room temperature. It is an extremely reactive element and a strong oxidising agent.</ChemistryGasesChlorine.description>
+  <!-- EN: mustard gas -->
+  <ChemistryGasesMustard.label>mustard gas</ChemistryGasesMustard.label>
+  <!-- EN: Sulfur mustard, commonly known as mustard gas, is the prototypical substance of the sulfur-based family of cytotoxic and vesicant chemical warfare agents. -->
+  <ChemistryGasesMustard.description>Sulfur mustard, commonly known as mustard gas, is the prototypical substance of the sulfur-based family of cytotoxic and vesicant chemical warfare agents.</ChemistryGasesMustard.description>
+  <!-- EN: sarin gas -->
+  <ChemistryGasesSarin.label>sarin gas</ChemistryGasesSarin.label>
+  <!-- EN: Sarin is a highly toxic synthetic organophosphorus compound used as a chemical weapon due to its extreme potency as a nerve agent. -->
+  <ChemistryGasesSarin.description>Sarin is a highly toxic synthetic organophosphorus compound used as a chemical weapon due to its extreme potency as a nerve agent.</ChemistryGasesSarin.description>
+  <!-- EN: isotope production -->
+  <ChemistryIsotopes.label>isotope production</ChemistryIsotopes.label>
+  <!-- EN: Production of uranium based isotopes. -->
+  <ChemistryIsotopes.description>Production of uranium based isotopes.</ChemistryIsotopes.description>
+  <!-- EN: chemical synthesis -->
+  <ChemistryMetals.label>chemical synthesis</ChemistryMetals.label>
+  <!-- EN: Production of basic metallic compounds. -->
+  <ChemistryMetals.description>Production of basic metallic compounds.</ChemistryMetals.description>
+  <!-- EN: chemical distillation -->
+  <ChemistryPlasteel.label>chemical distillation</ChemistryPlasteel.label>
+  <!-- EN: Production of noble metals and laboratory compounds. -->
+  <ChemistryPlasteel.description>Production of noble metals and laboratory compounds.</ChemistryPlasteel.description>
+  <!-- EN: chemical fire -->
+  <ChemistryPower.label>chemical fire</ChemistryPower.label>
+  <!-- EN: Learn how to use chemical compounds to induce high temperature burn. -->
+  <ChemistryPower.description>Learn how to use chemical compounds to induce high temperature burn.</ChemistryPower.description>
+  <!-- EN: chemical recombination -->
+  <ChemistryRecombination.label>chemical recombination</ChemistryRecombination.label>
+  <!-- EN: Production of synthetic materials. -->
+  <ChemistryRecombination.description>Production of synthetic materials.</ChemistryRecombination.description>
+  <!-- EN: chemical refinement -->
+  <ChemistryRefinement.label>chemical refinement</ChemistryRefinement.label>
+  <!-- EN: Production of purified chemical compounds. -->
+  <ChemistryRefinement.description>Production of purified chemical compounds.</ChemistryRefinement.description>
+  <!-- EN: volatile chemicals -->
+  <ChemistryVolatile.label>volatile chemicals</ChemistryVolatile.label>
+  <!-- EN: Production of volatile and dangerous chemicals. -->
+  <ChemistryVolatile.description>Production of volatile and dangerous chemicals.</ChemistryVolatile.description>
+</LanguageData>

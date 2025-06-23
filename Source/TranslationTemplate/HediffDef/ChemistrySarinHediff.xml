@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: sarin poisoning -->
+  <SarinExposure.label>sarin poisoning</SarinExposure.label>
+  <!-- EN: sarin poisoning -->
+  <SarinExposure.description>sarin poisoning</SarinExposure.description>
+  <!-- EN: a poisoning -->
+  <SarinExposure.labelNoun>a poisoning</SarinExposure.labelNoun>
+  <!-- EN: severe -->
+  <SarinExposure.stages.severe.label>severe</SarinExposure.stages.severe.label>
+</LanguageData>

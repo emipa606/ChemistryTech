@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Anesthezine Gas trap -->
+  <TrapIED_Anesthezine.label>Anesthezine Gas trap</TrapIED_Anesthezine.label>
+  <!-- EN: Anesthezine gas trap based on the IED design. -->
+  <TrapIED_Anesthezine.description>Anesthezine gas trap based on the IED design.</TrapIED_Anesthezine.description>
+  <!-- EN: Chlorine Gas trap -->
+  <TrapIED_Chlorine.label>Chlorine Gas trap</TrapIED_Chlorine.label>
+  <!-- EN: Chlorine gas trap based on the IED design. -->
+  <TrapIED_Chlorine.description>Chlorine gas trap based on the IED design.</TrapIED_Chlorine.description>
+  <!-- EN: Mustard Gas trap -->
+  <TrapIED_Mustard.label>Mustard Gas trap</TrapIED_Mustard.label>
+  <!-- EN: Mustard gas trap based on the IED design. -->
+  <TrapIED_Mustard.description>Mustard gas trap based on the IED design.</TrapIED_Mustard.description>
+  <!-- EN: Sarin Gas trap -->
+  <TrapIED_Sarine.label>Sarin Gas trap</TrapIED_Sarine.label>
+  <!-- EN: Sarin gas trap based on the IED design. -->
+  <TrapIED_Sarine.description>Sarin gas trap based on the IED design.</TrapIED_Sarine.description>
+</LanguageData>

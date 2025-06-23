@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: anesthezine -->
+  <AnesthezineExposure.label>anesthezine</AnesthezineExposure.label>
+  <!-- EN: anesthezine -->
+  <AnesthezineExposure.description>anesthezine</AnesthezineExposure.description>
+  <!-- EN: a sedation -->
+  <AnesthezineExposure.labelNoun>a sedation</AnesthezineExposure.labelNoun>
+  <!-- EN: severe -->
+  <AnesthezineExposure.stages.severe.label>severe</AnesthezineExposure.stages.severe.label>
+</LanguageData>

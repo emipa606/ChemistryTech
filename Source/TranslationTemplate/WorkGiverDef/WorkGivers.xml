@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: create chemical compound -->
+  <DoBillsTableChemical.label>create chemical compound</DoBillsTableChemical.label>
+  <!-- EN: crafting chemicals -->
+  <DoBillsTableChemical.gerund>crafting chemicals</DoBillsTableChemical.gerund>
+  <!-- EN: craft chemicals -->
+  <DoBillsTableChemical.verb>craft chemicals</DoBillsTableChemical.verb>
+  <!-- EN: create ionic mass -->
+  <DoBillsTableMolecular.label>create ionic mass</DoBillsTableMolecular.label>
+  <!-- EN: crafting ionic mass -->
+  <DoBillsTableMolecular.gerund>crafting ionic mass</DoBillsTableMolecular.gerund>
+  <!-- EN: craft ionic mass -->
+  <DoBillsTableMolecular.verb>craft ionic mass</DoBillsTableMolecular.verb>
+</LanguageData>

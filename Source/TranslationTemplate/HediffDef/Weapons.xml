@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: chemical exposure -->
+  <chemicalBurn.label>chemical exposure</chemicalBurn.label>
+  <!-- EN: chemical exposure -->
+  <chemicalBurn.description>chemical exposure</chemicalBurn.description>
+  <!-- EN: old exposure -->
+  <chemicalBurn.comps.HediffComp_GetsPermanent.permanentLabel>old exposure</chemicalBurn.comps.HediffComp_GetsPermanent.permanentLabel>
+  <!-- EN: Lost to chemical exposure -->
+  <chemicalBurn.injuryProps.destroyedLabel>Lost to chemical exposure</chemicalBurn.injuryProps.destroyedLabel>
+  <!-- EN: {0} in the {1} -->
+  <chemicalBurn.labelNounPretty>{0} in the {1}</chemicalBurn.labelNounPretty>
+</LanguageData>

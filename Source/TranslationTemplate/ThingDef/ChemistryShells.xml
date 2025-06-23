@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: chlorine gas shell -->
+  <Bullet_Shell_Chlorine.label>chlorine gas shell</Bullet_Shell_Chlorine.label>
+  <!-- EN: mustard gas shell -->
+  <Bullet_Shell_Mustard.label>mustard gas shell</Bullet_Shell_Mustard.label>
+  <!-- EN: sarin gas shell -->
+  <Bullet_Shell_Sarin.label>sarin gas shell</Bullet_Shell_Sarin.label>
+  <!-- EN: chlorine gas shell -->
+  <Shell_Chlorine.label>chlorine gas shell</Shell_Chlorine.label>
+  <!-- EN: A shell filled with chlorine gas. Can be fired from mortars. -->
+  <Shell_Chlorine.description>A shell filled with chlorine gas. Can be fired from mortars.</Shell_Chlorine.description>
+  <!-- EN: mustard gas shell -->
+  <Shell_Mustard.label>mustard gas shell</Shell_Mustard.label>
+  <!-- EN: A shell filled with mustard gas. Can be fired from mortars. -->
+  <Shell_Mustard.description>A shell filled with mustard gas. Can be fired from mortars.</Shell_Mustard.description>
+  <!-- EN: sarin gas shell -->
+  <Shell_Sarin.label>sarin gas shell</Shell_Sarin.label>
+  <!-- EN: A shell filled with sarin gas. Can be fired from mortars. -->
+  <Shell_Sarin.description>A shell filled with sarin gas. Can be fired from mortars.</Shell_Sarin.description>
+</LanguageData>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Anesthezine Gas -->
+  <GasAnesthezine.label>Anesthezine Gas</GasAnesthezine.label>
+  <!-- EN: Anesthezine gas tank. -->
+  <GasAnesthezine.description>Anesthezine gas tank.</GasAnesthezine.description>
+  <!-- EN: Chlorine Gas -->
+  <GasChlorine.label>Chlorine Gas</GasChlorine.label>
+  <!-- EN: Chlorine gas tank. -->
+  <GasChlorine.description>Chlorine gas tank.</GasChlorine.description>
+  <!-- EN: Mustard Gas -->
+  <GasMustard.label>Mustard Gas</GasMustard.label>
+  <!-- EN: Mustard gas tank. -->
+  <GasMustard.description>Mustard gas tank.</GasMustard.description>
+  <!-- EN: Sarin Gas -->
+  <GasSarin.label>Sarin Gas</GasSarin.label>
+  <!-- EN: Sarin gas tank. -->
+  <GasSarin.description>Sarin gas tank.</GasSarin.description>
+</LanguageData>

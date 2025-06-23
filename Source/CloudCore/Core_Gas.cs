@@ -9,20 +9,19 @@ namespace CloudCore;
 
 public class Core_Gas : Thing
 {
-    private const int MOVE_TICKS = 1;
-    private const int CHECK_TICKS = 5;
-    private const int WIND_SPEED_REDUCTION = 20;
-    private const int HIT_TICKS = 120;
+    private const int MoveTicks = 1;
+    private const int CheckTicks = 5;
+    private const int WindSpeedReduction = 20;
+    private const int HitTicks = 120;
     private int checkGasTick;
-    public int destroyTick;
+    private int destroyTick;
 
     private Vector3 drawPosition;
 
-    public float graphicRotation;
+    private float graphicRotation;
 
-    public float graphicRotationSpeed;
+    private float graphicRotationSpeed;
     private int hitTick;
-    public int intensity = 1;
     private bool isStopped;
 
     private int moveGasTick;
@@ -59,11 +58,11 @@ public class Core_Gas : Thing
         {
             // direction
             var modifier = rndUtil.Next(19) - 10;
-            windDirection = wsUtil.windDirectionRad + (modifier * (float)Math.PI / 180f);
+            windDirection = wsUtil.WindDirectionRad + (modifier * (float)Math.PI / 180f);
             // speed
             var modifierSpeed = rndUtil.Next(19) - 10;
-            windSpeed = wsUtil.windSpeed + rndWindSpeed;
-            windSpeed /= WIND_SPEED_REDUCTION + modifierSpeed;
+            windSpeed = wsUtil.WindSpeed + rndWindSpeed;
+            windSpeed /= WindSpeedReduction + modifierSpeed;
         }
         else
         {
@@ -181,11 +180,11 @@ public class Core_Gas : Thing
         if (!preventGas)
         {
             Log.Message("gas not prevented");
-            if (def.projectile.GetDamageAmount(1f) > 0)
+            if (def.projectile.GetDamageAmount(1f, this) > 0)
             {
                 // gas does physical damage
                 // generate injury and add it to pawn
-                var num = def.projectile.GetDamageAmount(1f);
+                var num = def.projectile.GetDamageAmount(1f, this);
                 var height = Rand.Value >= 0.666 ? BodyPartHeight.Middle : BodyPartHeight.Top;
                 float armorPenetration = 0;
 
@@ -211,7 +210,7 @@ public class Core_Gas : Thing
         }
     }
 
-    public override void Tick()
+    protected override void Tick()
     {
         if (!Spawned)
         {
@@ -226,7 +225,7 @@ public class Core_Gas : Thing
         {
             graphicRotation += graphicRotationSpeed + rndUtil.Next(5) - 3;
 
-            if (hitTick > HIT_TICKS)
+            if (hitTick > HitTicks)
             {
                 var thingList = Position.GetThingList(Map);
                 if (thingList != null)
@@ -258,11 +257,11 @@ public class Core_Gas : Thing
                 hitTick++;
             }
 
-            if (moveGasTick > MOVE_TICKS)
+            if (moveGasTick > MoveTicks)
             {
                 moveGasTick = 0;
                 var check = false;
-                if (checkGasTick > CHECK_TICKS)
+                if (checkGasTick > CheckTicks)
                 {
                     checkGasTick = 0;
                     check = true;

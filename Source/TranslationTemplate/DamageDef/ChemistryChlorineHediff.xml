@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: chlorine poisoning -->
+  <ChlorineGasExposure.label>chlorine poisoning</ChlorineGasExposure.label>
+  <!-- EN: {0} has succumbed to chlorine exposure. -->
+  <ChlorineGasExposure.deathMessage>{0} has succumbed to chlorine exposure.</ChlorineGasExposure.deathMessage>
+</LanguageData>

@@ -25,9 +25,9 @@ public class GasTestBuilding : Building
         var cws = (MapComponent_WindSpeed)Find.CurrentMap.GetComponent(typeof(MapComponent_WindSpeed));
         if (cws != null)
         {
-            stringBuilder.AppendLine($"Speed: {cws.windSpeed}");
-            stringBuilder.AppendLine($"Direction: {cws.windDirection}");
-            stringBuilder.AppendLine($"Direction rad: {cws.windDirectionRad}");
+            stringBuilder.AppendLine($"Speed: {cws.WindSpeed}");
+            stringBuilder.AppendLine($"Direction: {cws.WindDirection}");
+            stringBuilder.AppendLine($"Direction rad: {cws.WindDirectionRad}");
         }
 
         stringBuilder.AppendLine(base.GetInspectString());

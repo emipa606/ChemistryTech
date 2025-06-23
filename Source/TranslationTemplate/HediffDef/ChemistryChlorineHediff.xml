@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: chlorine poisoning -->
+  <ChlorineExposure.label>chlorine poisoning</ChlorineExposure.label>
+  <!-- EN: chlorine poisoning -->
+  <ChlorineExposure.description>chlorine poisoning</ChlorineExposure.description>
+  <!-- EN: a poisoning -->
+  <ChlorineExposure.labelNoun>a poisoning</ChlorineExposure.labelNoun>
+  <!-- EN: minor -->
+  <ChlorineExposure.stages.minor.label>minor</ChlorineExposure.stages.minor.label>
+  <!-- EN: major -->
+  <ChlorineExposure.stages.major.label>major</ChlorineExposure.stages.major.label>
+  <!-- EN: extreme -->
+  <ChlorineExposure.stages.extreme-0.label>extreme</ChlorineExposure.stages.extreme-0.label>
+  <!-- EN: extreme -->
+  <ChlorineExposure.stages.extreme-1.label>extreme</ChlorineExposure.stages.extreme-1.label>
+</LanguageData>

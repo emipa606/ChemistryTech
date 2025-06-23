@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Chemicals -->
+  <Chemicals.label>Chemicals</Chemicals.label>
+  <!-- EN: Container full of chemical compound. -->
+  <Chemicals.description>Container full of chemical compound.</Chemicals.description>
+  <!-- EN: Magnetic container -->
+  <Ionic.label>Magnetic container</Ionic.label>
+  <!-- EN: Container full of ionic particle mass. -->
+  <Ionic.description>Container full of ionic particle mass.</Ionic.description>
+  <!-- EN: molecularweave -->
+  <Molecularweave.label>molecularweave</Molecularweave.label>
+  <!-- EN: High-tech molecular-fibers woven into sheets. It is light and incredibly difficult to break. Hard, resistant to piercing but not fireproof. -->
+  <Molecularweave.description>High-tech molecular-fibers woven into sheets. It is light and incredibly difficult to break. Hard, resistant to piercing but not fireproof.</Molecularweave.description>
+  <!-- EN: nanocomposite -->
+  <Nanocomposite.label>nanocomposite</Nanocomposite.label>
+  <!-- EN: Material carefully crafted from loose molecules to form a very light and hardened, heat and energy dissipating material. -->
+  <Nanocomposite.description>Material carefully crafted from loose molecules to form a very light and hardened, heat and energy dissipating material.</Nanocomposite.description>
+  <!-- EN: Refined Chemicals -->
+  <RefinedChemicals.label>Refined Chemicals</RefinedChemicals.label>
+  <!-- EN: Container full of assorted chemical compounds. -->
+  <RefinedChemicals.description>Container full of assorted chemical compounds.</RefinedChemicals.description>
+  <!-- EN: smartweave -->
+  <Smartweave.label>smartweave</Smartweave.label>
+  <!-- EN: Fabric made from carbon nanofibers enhanced with nanites to provide perfect outdoor clothing material. -->
+  <Smartweave.description>Fabric made from carbon nanofibers enhanced with nanites to provide perfect outdoor clothing material.</Smartweave.description>
+  <!-- EN: chemical synthesizer -->
+  <TableChemical.label>chemical synthesizer</TableChemical.label>
+  <!-- EN: Production facility for chemical compounds. Chemical compounds can be used to produce useful resources. -->
+  <TableChemical.description>Production facility for chemical compounds. Chemical compounds can be used to produce useful resources.</TableChemical.description>
+  <!-- EN: molecular synthesizer -->
+  <TableMolecular.label>molecular synthesizer</TableMolecular.label>
+  <!-- EN: Production facility for Ionic particle mass and synthetic materials. -->
+  <TableMolecular.description>Production facility for Ionic particle mass and synthetic materials.</TableMolecular.description>
+</LanguageData>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: create ionic mass -->
+  <ionicMake.label>create ionic mass</ionicMake.label>
+  <!-- EN: Create a ionic particle mass from chemicals. -->
+  <ionicMake.description>Create a ionic particle mass from chemicals.</ionicMake.description>
+  <!-- EN: Producing particle mass. -->
+  <ionicMake.jobString>Producing particle mass.</ionicMake.jobString>
+  <!-- EN: fabricate hyperweave -->
+  <ionicMakeHW.label>fabricate hyperweave</ionicMakeHW.label>
+  <!-- EN: Create hyperweave from particle mass. -->
+  <ionicMakeHW.description>Create hyperweave from particle mass.</ionicMakeHW.description>
+  <!-- EN: Producing hyperweave. -->
+  <ionicMakeHW.jobString>Producing hyperweave.</ionicMakeHW.jobString>
+  <!-- EN: fabricate molecularweave -->
+  <ionicMakeMW.label>fabricate molecularweave</ionicMakeMW.label>
+  <!-- EN: Create molecularweave from particle mass. -->
+  <ionicMakeMW.description>Create molecularweave from particle mass.</ionicMakeMW.description>
+  <!-- EN: Producing molecularweave. -->
+  <ionicMakeMW.jobString>Producing molecularweave.</ionicMakeMW.jobString>
+  <!-- EN: fabricate nanocomposite -->
+  <ionicMakeNC.label>fabricate nanocomposite</ionicMakeNC.label>
+  <!-- EN: Create nanocomposite by refining molecularweave. -->
+  <ionicMakeNC.description>Create nanocomposite by refining molecularweave.</ionicMakeNC.description>
+  <!-- EN: Producing nanocomposite. -->
+  <ionicMakeNC.jobString>Producing nanocomposite.</ionicMakeNC.jobString>
+  <!-- EN: fabricate synthread -->
+  <ionicMakeST.label>fabricate synthread</ionicMakeST.label>
+  <!-- EN: Create synthread from particle mass. -->
+  <ionicMakeST.description>Create synthread from particle mass.</ionicMakeST.description>
+  <!-- EN: Producing synthread. -->
+  <ionicMakeST.jobString>Producing synthread.</ionicMakeST.jobString>
+  <!-- EN: fabricate smartweave -->
+  <ionicMakeSW.label>fabricate smartweave</ionicMakeSW.label>
+  <!-- EN: Create smartweave from cloth. -->
+  <ionicMakeSW.description>Create smartweave from cloth.</ionicMakeSW.description>
+  <!-- EN: Producing smartweave. -->
+  <ionicMakeSW.jobString>Producing smartweave.</ionicMakeSW.jobString>
+</LanguageData>

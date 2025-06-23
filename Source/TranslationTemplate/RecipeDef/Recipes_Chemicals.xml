@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: create compound -->
+  <chemicalMake.label>create compound</chemicalMake.label>
+  <!-- EN: Create a chemical compound from stuff you don't need. -->
+  <chemicalMake.description>Create a chemical compound from stuff you don't need.</chemicalMake.description>
+  <!-- EN: Producing chemicals. -->
+  <chemicalMake.jobString>Producing chemicals.</chemicalMake.jobString>
+  <!-- EN: create bulk compound -->
+  <chemicalMakeBulk.label>create bulk compound</chemicalMakeBulk.label>
+  <!-- EN: Create a bulk of chemical compound from stuff you don't need. -->
+  <chemicalMakeBulk.description>Create a bulk of chemical compound from stuff you don't need.</chemicalMakeBulk.description>
+  <!-- EN: Producing chemicals. -->
+  <chemicalMakeBulk.jobString>Producing chemicals.</chemicalMakeBulk.jobString>
+  <!-- EN: fabricate chemfuel -->
+  <chemicalMakeC.label>fabricate chemfuel</chemicalMakeC.label>
+  <!-- EN: Create chemfuel from chemical compounds. -->
+  <chemicalMakeC.description>Create chemfuel from chemical compounds.</chemicalMakeC.description>
+  <!-- EN: Producing chemfuel. -->
+  <chemicalMakeC.jobString>Producing chemfuel.</chemicalMakeC.jobString>
+  <!-- EN: fabricate gold -->
+  <chemicalMakeG.label>fabricate gold</chemicalMakeG.label>
+  <!-- EN: Create gold from chemical compounds. -->
+  <chemicalMakeG.description>Create gold from chemical compounds.</chemicalMakeG.description>
+  <!-- EN: Producing gold. -->
+  <chemicalMakeG.jobString>Producing gold.</chemicalMakeG.jobString>
+  <!-- EN: create big bulk compound -->
+  <chemicalMakeLargeBulk.label>create big bulk compound</chemicalMakeLargeBulk.label>
+  <!-- EN: Create a big bulk of chemical compound from stuff you don't need. -->
+  <chemicalMakeLargeBulk.description>Create a big bulk of chemical compound from stuff you don't need.</chemicalMakeLargeBulk.description>
+  <!-- EN: Producing chemicals. -->
+  <chemicalMakeLargeBulk.jobString>Producing chemicals.</chemicalMakeLargeBulk.jobString>
+  <!-- EN: fabricate neutroamine -->
+  <chemicalMakeN.label>fabricate neutroamine</chemicalMakeN.label>
+  <!-- EN: Create neutroamine from chemical compounds. -->
+  <chemicalMakeN.description>Create neutroamine from chemical compounds.</chemicalMakeN.description>
+  <!-- EN: Producing neutroamine. -->
+  <chemicalMakeN.jobString>Producing neutroamine.</chemicalMakeN.jobString>
+  <!-- EN: fabricate plasteel -->
+  <chemicalMakePl.label>fabricate plasteel</chemicalMakePl.label>
+  <!-- EN: Create plasteel from chemical compounds. -->
+  <chemicalMakePl.description>Create plasteel from chemical compounds.</chemicalMakePl.description>
+  <!-- EN: Producing plasteel. -->
+  <chemicalMakePl.jobString>Producing plasteel.</chemicalMakePl.jobString>
+  <!-- EN: create refined chemicals -->
+  <chemicalMakeRefined.label>create refined chemicals</chemicalMakeRefined.label>
+  <!-- EN: Create an assorted box of chemical compounds. -->
+  <chemicalMakeRefined.description>Create an assorted box of chemical compounds.</chemicalMakeRefined.description>
+  <!-- EN: Refining chemicals. -->
+  <chemicalMakeRefined.jobString>Refining chemicals.</chemicalMakeRefined.jobString>
+  <!-- EN: fabricate steel -->
+  <chemicalMakeS.label>fabricate steel</chemicalMakeS.label>
+  <!-- EN: Create steel from chemical compounds. -->
+  <chemicalMakeS.description>Create steel from chemical compounds.</chemicalMakeS.description>
+  <!-- EN: Producing steel. -->
+  <chemicalMakeS.jobString>Producing steel.</chemicalMakeS.jobString>
+  <!-- EN: fabricate silver -->
+  <chemicalMakeSi.label>fabricate silver</chemicalMakeSi.label>
+  <!-- EN: Create silver from chemical compounds. -->
+  <chemicalMakeSi.description>Create silver from chemical compounds.</chemicalMakeSi.description>
+  <!-- EN: Producing silver. -->
+  <chemicalMakeSi.jobString>Producing silver.</chemicalMakeSi.jobString>
+  <!-- EN: fabricate uranium -->
+  <chemicalMakeU.label>fabricate uranium</chemicalMakeU.label>
+  <!-- EN: Create uranium from chemical compounds. -->
+  <chemicalMakeU.description>Create uranium from chemical compounds.</chemicalMakeU.description>
+  <!-- EN: Producing uranium. -->
+  <chemicalMakeU.jobString>Producing uranium.</chemicalMakeU.jobString>
+</LanguageData>

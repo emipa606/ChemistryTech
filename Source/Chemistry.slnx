@@ -1,0 +1,11 @@
+<Solution>
+  <Configurations>
+    <BuildType Name="Release" />
+  </Configurations>
+  <Project Path="CloudCore/CloudCore.csproj">
+    <BuildType Project="Release" />
+  </Project>
+  <Properties Name="MonoDevelopProperties">
+    <Property Name="outputpath" Value="..\..\Assemblies" />
+  </Properties>
+</Solution>
